@@ -1,5 +1,6 @@
 package life.usc.study.service;
 
+import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
 import life.usc.study.mapper.QuestionMapper;
 import life.usc.study.mapper.UserMapper;
@@ -20,18 +21,24 @@ public class QuestionService {
     @Autowired
     UserMapper userMapper;
 
-    public List<QuestionDTO> list() {
-        List<Question> questions = questionMapper.getAllQuestions();
+    public PaginationDTO list(Integer pageNum, Integer size) {
+
+        // limit子句中的第一个参数
+        Integer offset = (pageNum - 1) * size;
+
+        List<Question> questions = questionMapper.getAllQuestions(offset, size);
         List<QuestionDTO> questionDTOS = new ArrayList<>();
         for (Question question : questions) {
             User user = userMapper.getUserById(question.getCreator());
-//            System.out.println(user);
-//            System.out.println("test");
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question, questionDTO);
             questionDTO.setUser(user);
             questionDTOS.add(questionDTO);
         }
-        return questionDTOS;
+
+        PaginationDTO paginationDTO = new PaginationDTO();
+        Integer totalCount = questionMapper.countTotal();
+        paginationDTO.setPagination(questionDTOS, pageNum, totalCount, size);
+        return paginationDTO;
     }
 }

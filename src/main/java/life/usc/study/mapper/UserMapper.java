@@ -17,4 +17,5 @@ public interface UserMapper {
 
     @Select("select * from user where id=#{creator}")
     User getUserById(@Param("creator") int creator);
+
 }

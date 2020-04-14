@@ -1,9 +1,11 @@
 package life.usc.study.controller;
 
+import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
 import life.usc.study.mapper.UserMapper;
 import life.usc.study.moel.User;
 import life.usc.study.service.QuestionService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +29,9 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(HttpServletRequest request,
-                        Model model) {
+                        Model model,
+                        @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
+                        @RequestParam(value = "size", defaultValue = "5") Integer size) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length != 0) {
             for (Cookie cookie : cookies) {
@@ -44,8 +48,9 @@ public class IndexController {
             }
         }
 
-        List<QuestionDTO> questionList = questionService.list();
-        model.addAttribute("questionList", questionList);
+        PaginationDTO pagination = questionService.list(pageNum, size);
+        model.addAttribute("questionList", pagination); //其实应该叫name应该是pagination 懒得改了
+
 
         return "index";
     }
