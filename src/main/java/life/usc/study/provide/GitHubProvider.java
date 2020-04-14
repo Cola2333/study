@@ -44,7 +44,7 @@ public class GitHubProvider {
 
         try (Response response = client.newCall(request).execute()) {
             String string =  response.body().string();
-            GitHubUser gitHubUser = JSON.parseObject(string, GitHubUser.class); //将json格式的数据转换成GitHubUser格式
+            GitHubUser gitHubUser = JSON.parseObject(string, GitHubUser.class); //将json格式的数据转换成GitHubUser格式 会自动匹配驼峰
             return gitHubUser;
         } catch (IOException e) {
             e.printStackTrace();
