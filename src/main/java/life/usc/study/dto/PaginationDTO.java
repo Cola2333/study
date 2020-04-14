@@ -19,16 +19,15 @@ public class PaginationDTO {
     private Integer totalPage;
     private LinkedList<Integer> pages;
 
-    public void setPagination(List<QuestionDTO> questionDTOS, Integer pageNum, Integer totalCount, Integer size) {
-        this.questions = questionDTOS;
+    public void setPagination(List<QuestionDTO> questions, Integer pageNum, Integer totalPage) {
+        this.questions = questions;
         this.curPage = pageNum;
-        if (totalCount % size == 0) {
-            this.totalPage = totalCount / size; //totalsize是总问题数 size是每页展示的问题数
-        }else {
-            this.totalPage = totalCount / size + 1;
-        }
+        this.totalPage =totalPage;
 
-        pages = new LinkedList<>();
+        /*
+        * 分页组件的逻辑
+        * */
+        this.pages = new LinkedList<>();
         pages.add(curPage);
         for (int i = 1; i <= 3; i ++) {
             if (curPage - i >= 1) {
