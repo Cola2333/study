@@ -64,7 +64,7 @@
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    <li th:each="page:${questionList.pages}"><a th:href="@{/(pageNum=${page})}" th:text="${page}">1</a></li>
+                    <li th:each="page:${questionList.pages}" th:class="${questionList.curPage}==${page} ? 'active' : ''"><a th:href="@{/(pageNum=${page})}" th:text="${page}">1</a></li>
 
                     <li>
                         <a href="#" aria-label="Next">
