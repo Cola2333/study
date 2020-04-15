@@ -44,11 +44,10 @@ public class QuestionService {
             pageNum = 1;
         }
 
-        // limit子句中的第一个参数
-        Integer offset = (pageNum - 1) * size;
+        Integer offset = (pageNum - 1) * size;// limit子句中的第一个参数
 
         List<Question> questions = questionMapper.getAllQuestions(offset, size);
-        List<QuestionDTO> questionDTOS = new ArrayList<>();
+        List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question
         for (Question question : questions) {
             User user = userMapper.getUserById(question.getCreator());
             QuestionDTO questionDTO = new QuestionDTO();
