@@ -53,7 +53,7 @@ public class PublishController {
         question.setDescription(decription);
         question.setGmtCreate(System.currentTimeMillis());
         question.setGmtModified(System.currentTimeMillis());
-        question.setCreator(user.getId());
+        question.setCreator(user.getAccountId());
         question.setTag(tag);
 
         questionMapper.createQuestion(question);

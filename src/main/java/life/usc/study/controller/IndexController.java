@@ -30,8 +30,8 @@ public class IndexController {
     @GetMapping("/")
     public String index(HttpServletRequest request,
                         Model model,
-                        @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
-                        @RequestParam(value = "size", defaultValue = "2") Integer size) {
+                        @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum,
+                        @RequestParam(name = "size", defaultValue = "2") Integer size) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length != 0) {
             for (Cookie cookie : cookies) {

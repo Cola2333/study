@@ -18,4 +18,7 @@ public interface QuestionMapper {
 
     @Select("select count(1) from question")
     Integer countTotal();
+
+    @Select("select count(1) from question")
+    Integer countByAccountId(String accountId);
 }

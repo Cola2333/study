@@ -63,4 +63,46 @@ public class QuestionService {
         paginationDTO.setPagination(questionDTOS, pageNum, totalPage);
         return paginationDTO;
     }
+
+    public PaginationDTO list(Integer pageNum, Integer size, String accountId) {
+        Integer totalCount = questionMapper.countByAccountId(accountId);
+        Integer totalPage;
+
+        /*
+         * 计算totalPage
+         * */
+        if (totalCount % size == 0) {
+            totalPage = totalCount / size; //totalCount是总问题数 size是每页展示的问题数
+        }else {
+            totalPage = totalCount / size + 1;
+        }
+
+        /*
+         * 防止页面数超过总页面数 重新给pageNum赋值
+         **/
+        if (pageNum > totalPage) {
+            pageNum = totalPage;
+        }else if (pageNum < 1){
+            pageNum = 1;
+        }
+
+        Integer offset = (pageNum - 1) * size;// limit子句中的第一个参数
+
+        List<Question> questions = questionMapper.getAllQuestions(offset, size);
+        List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question
+        for (Question question : questions) {
+            User user = userMapper.getUserById(question.getCreator());// 这个似乎不再需要了 不过先不删
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(question, questionDTO);
+            questionDTO.setUser(user);
+            questionDTOS.add(questionDTO);
+        }
+
+        /*
+         * 得到了所需的全部属性 一起赋值
+         * */
+        PaginationDTO paginationDTO = new PaginationDTO();
+        paginationDTO.setPagination(questionDTOS, pageNum, totalPage);
+        return paginationDTO;
+    }
 }
