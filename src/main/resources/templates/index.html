@@ -18,14 +18,14 @@
             <hr>
             <div class="media" th:each="question:${questionList.questions}" >
                 <div class="media-left">
-                    <a href="#">
+                    <a th:href="@{'/question/'+${question.id}}">
                         <img class="media-object img-circle" th:src="${question.user.avatarUrl}">
                     </a>
                 </div>
                 <div class="media-body" >
                     <h4 class="media-heading" th:text="${question.title}"></h4>
                     <span th:text="${question.description}"></span><br>
-                    <span class="text_desc" th:text="${question.commentCount}+'个回复·'+${question.viewCount}+'个浏览·'+${#dates.format(question.gmtCreate,'yyyy/MM/dd HH:mm')}+'创建'"> </span>
+                    <span class="text-desc" th:text="${question.commentCount}+'个回复·'+${question.viewCount}+'个浏览·'+${#dates.format(question.gmtCreate,'yyyy/MM/dd HH:mm')}+'创建'"> </span>
                 </div>
             </div>
             <nav aria-label="Page navigation">
