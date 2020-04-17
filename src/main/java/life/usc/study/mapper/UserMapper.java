@@ -1,10 +1,7 @@
 package life.usc.study.mapper;
 
 import life.usc.study.moel.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Service;
 
 @Mapper
@@ -18,4 +15,6 @@ public interface UserMapper {
     @Select("select * from user where account_id=#{creator} limit 1")
     User getUserById(@Param("creator") String creator);
 
+    @Update("update user set name=#{name},token=#{token},gmt_modified=#{gmtModified},bio=#{bio},avatar_url=#{avatarUrl} where account_id=${accountId}")
+    void update(User user);
 }
