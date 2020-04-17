@@ -4,14 +4,14 @@ import lombok.Data;
 
 @Data
 public class Question {
-    private int id;
+    private Integer id;
     private String title;
-    private  String description;
+    private String description;
     private Long gmtCreate;
     private Long gmtModified;
     private String creator;
-    private int commentCount;
-    private int viewCount;
-    private int likeCount;
+    private Integer commentCount;
+    private Integer viewCount;
+    private Integer likeCount;
     private String tag;
 }
