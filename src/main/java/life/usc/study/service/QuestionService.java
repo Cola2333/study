@@ -4,6 +4,7 @@ import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
 import life.usc.study.exception.CustomizeException;
 import life.usc.study.exception.CustormizeErrorCode;
+import life.usc.study.mapper.QuestionExtMapper;
 import life.usc.study.mapper.QuestionMapper;
 import life.usc.study.mapper.UserMapper;
 import life.usc.study.model.Question;
@@ -25,6 +26,9 @@ public class QuestionService {
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    QuestionExtMapper questionExtMapper;
 
     public PaginationDTO list(Integer pageNum, Integer size) {
         Integer totalCount = (int)questionMapper.countByExample(new QuestionExample());
@@ -168,12 +172,8 @@ public class QuestionService {
     }
 
     public void incViewCount(Integer id) {
-        Question question = questionMapper.selectByPrimaryKey(id);
-        Question updateQuestion = new Question();
-        updateQuestion.setViewCount(question.getViewCount() + 1);
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.createCriteria()
-                .andIdEqualTo(id);
-        questionMapper.updateByExampleSelective(updateQuestion, questionExample);
+        Question question = new Question();
+        question.setId(id);
+        questionExtMapper.incViewCount(question);
     }
 }
