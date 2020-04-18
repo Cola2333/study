@@ -132,7 +132,7 @@ public class QuestionService {
         return paginationDTO;
     }
 
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
         if (question == null) { //可能页面从地址上直接写了一个不存在的问题id
             throw new CustomizeException(CustormizeErrorCode.QUESTION_NOT_FOUND);
@@ -171,7 +171,7 @@ public class QuestionService {
         }
     }
 
-    public void incViewCount(Integer id) {
+    public void incViewCount(Long id) {
         Question question = new Question();
         question.setId(id);
         questionExtMapper.incViewCount(question);
