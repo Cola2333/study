@@ -19,8 +19,8 @@ public class QuestionController {
                            Model model) {
 
         QuestionDTO questionDTO = questionService.getById(id);
+        questionService.incViewCount(id); //阅读数累加
         model.addAttribute("question", questionDTO);
-        System.out.println(questionDTO.getCreator());
         return "question";
     }
 }
