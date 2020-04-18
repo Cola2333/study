@@ -1,9 +1,12 @@
 package life.usc.study.service;
 
 import life.usc.study.mapper.UserMapper;
-import life.usc.study.moel.User;
+import life.usc.study.model.User;
+import life.usc.study.model.UserExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -11,19 +14,27 @@ public class UserService {
     UserMapper userMapper;
 
     public void insertOrUpdate(User user) {
-        User dbUser = userMapper.getUserById(user.getAccountId());
-        if (dbUser == null) {
+        UserExample userExample = new UserExample();
+        userExample.createCriteria()
+                .andAccountIdEqualTo(user.getAccountId());
+        List<User> dbUsers = userMapper.selectByExample(userExample);
+        if (dbUsers.size() == 0) {
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
         }
         else {
-            dbUser.setName(user.getName());
-            dbUser.setToken(user.getToken());
-            dbUser.setGmtModified(System.currentTimeMillis());
-            dbUser.setBio(user.getBio());
-            dbUser.setAvatarUrl(user.getAvatarUrl());
-            userMapper.update(dbUser);
+            User dbUser = dbUsers.get(0);
+            User updateUser = new User();
+            updateUser.setName(user.getName());
+            updateUser.setToken(user.getToken());
+            updateUser.setGmtModified(System.currentTimeMillis());
+            updateUser.setBio(user.getBio());
+            updateUser.setAvatarUrl(user.getAvatarUrl());
+            UserExample example = new UserExample();
+            example.createCriteria()
+                    .andAccountIdEqualTo(dbUser.getAccountId());
+            userMapper.updateByExampleSelective(updateUser, example);
         }
     }
 }

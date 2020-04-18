@@ -1,6 +1,6 @@
 package life.usc.study.dto;
 
-import life.usc.study.moel.Question;
+import life.usc.study.model.Question;
 import lombok.Data;
 import org.h2.store.Page;
 

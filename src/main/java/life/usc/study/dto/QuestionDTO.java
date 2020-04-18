@@ -1,6 +1,6 @@
 package life.usc.study.dto;
 
-import life.usc.study.moel.User;
+import life.usc.study.model.User;
 import lombok.Data;
 
 @Data

@@ -1,7 +1,7 @@
 package life.usc.study.controller;
 
 import life.usc.study.dto.PaginationDTO;
-import life.usc.study.moel.User;
+import life.usc.study.model.User;
 import life.usc.study.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

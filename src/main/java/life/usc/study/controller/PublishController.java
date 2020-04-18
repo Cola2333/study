@@ -1,8 +1,8 @@
 package life.usc.study.controller;
 
 import life.usc.study.mapper.QuestionMapper;
-import life.usc.study.moel.Question;
-import life.usc.study.moel.User;
+import life.usc.study.model.Question;
+import life.usc.study.model.User;
 import life.usc.study.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,7 @@ public class PublishController {
     @GetMapping("/publish/{id}")
     public String edit(@PathVariable("id") Integer id,
                        Model model) {
-        Question question = questionMapper.getById(id);
+        Question question = questionMapper.selectByPrimaryKey(id);
         model.addAttribute("title", question.getTitle());
         model.addAttribute("description", question.getDescription());
         model.addAttribute("tag", question.getTag());

@@ -4,8 +4,11 @@ import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
 import life.usc.study.mapper.QuestionMapper;
 import life.usc.study.mapper.UserMapper;
-import life.usc.study.moel.Question;
-import life.usc.study.moel.User;
+import life.usc.study.model.Question;
+import life.usc.study.model.QuestionExample;
+import life.usc.study.model.User;
+import life.usc.study.model.UserExample;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,8 +25,8 @@ public class QuestionService {
     UserMapper userMapper;
 
     public PaginationDTO list(Integer pageNum, Integer size) {
-
-        Integer totalCount = questionMapper.countTotal();
+        Integer totalCount = (int)questionMapper.countByExample(new QuestionExample());
+        //Integer totalCount = questionMapper.countTotal();
         Integer totalPage;
 
         /*
@@ -46,10 +49,15 @@ public class QuestionService {
 
         Integer offset = (pageNum - 1) * size;// limit子句中的第一个参数
 
-        List<Question> questions = questionMapper.getAllQuestions(offset, size);
+        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(new QuestionExample(), new RowBounds(offset, size));
+        //List<Question> questions = questionMapper.getAllQuestions(offset, size);
         List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question
         for (Question question : questions) {
-            User user = userMapper.getUserById(question.getCreator());
+            UserExample userExample = new UserExample();
+            userExample.createCriteria()
+                    .andAccountIdEqualTo(question.getCreator());
+            List<User> users = userMapper.selectByExample(userExample);
+            User user = users.get(0);
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question, questionDTO);
             questionDTO.setUser(user);
@@ -65,7 +73,11 @@ public class QuestionService {
     }
 
     public PaginationDTO list(Integer pageNum, Integer size, String accountId) {
-        Integer totalCount = questionMapper.countByAccountId(accountId);
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.createCriteria()
+                .andCreatorEqualTo(accountId);
+        Integer totalCount = (int)questionMapper.countByExample(questionExample);
+        //Integer totalCount = questionMapper.countByAccountId(accountId);
         Integer totalPage;
 
         /*
@@ -88,10 +100,18 @@ public class QuestionService {
 
         Integer offset = (pageNum - 1) * size;// limit子句中的第一个参数
 
-        List<Question> questions = questionMapper.getAllQuestions(offset, size);
+        QuestionExample example = new QuestionExample();
+        example.createCriteria()
+                .andCreatorEqualTo(accountId);
+        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(example, new RowBounds(offset, size));
+        //List<Question> questions = questionMapper.getAllQuestions(offset, size);
         List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question
         for (Question question : questions) {
-            User user = userMapper.getUserById(question.getCreator());// 这个似乎不再需要了 不过先不删
+            UserExample userExample = new UserExample();
+            userExample.createCriteria()
+                    .andAccountIdEqualTo(question.getCreator());
+            List<User> users = userMapper.selectByExample(userExample);
+            User user = users.get(0);
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question, questionDTO);
             questionDTO.setUser(user);
@@ -107,8 +127,12 @@ public class QuestionService {
     }
 
     public QuestionDTO getById(Integer id) {
-        Question question = questionMapper.getById(id);
-        User user = userMapper.getUserById(question.getCreator());
+        Question question = questionMapper.selectByPrimaryKey(id);
+        UserExample userExample = new UserExample();
+        userExample.createCriteria()
+                .andAccountIdEqualTo(question.getCreator());
+        List<User> users = userMapper.selectByExample(userExample);
+        User user = users.get(0);
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question, questionDTO);
         questionDTO.setUser(user);
@@ -119,11 +143,19 @@ public class QuestionService {
         if (question.getId() == null) {
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(System.currentTimeMillis());
-            questionMapper.createQuestion(question);
+            questionMapper.insert(question);
         }
         else {
-            question.setGmtModified(System.currentTimeMillis());
-            questionMapper.update(question);
+            Question updateQuestion = new Question();
+            updateQuestion.setGmtModified(System.currentTimeMillis());
+            updateQuestion.setTitle(question.getTitle());
+            updateQuestion.setDescription(question.getDescription());
+            updateQuestion.setTag(question.getTag());
+
+            QuestionExample questionExample = new QuestionExample();
+            questionExample.createCriteria()
+                    .andIdEqualTo(question.getId());
+            questionMapper.updateByExampleSelective(updateQuestion, questionExample);
         }
     }
 }
