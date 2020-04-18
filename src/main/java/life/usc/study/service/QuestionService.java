@@ -2,6 +2,8 @@ package life.usc.study.service;
 
 import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
+import life.usc.study.exception.CustomizeException;
+import life.usc.study.exception.CustormizeErrorCode;
 import life.usc.study.mapper.QuestionMapper;
 import life.usc.study.mapper.UserMapper;
 import life.usc.study.model.Question;
@@ -128,6 +130,9 @@ public class QuestionService {
 
     public QuestionDTO getById(Integer id) {
         Question question = questionMapper.selectByPrimaryKey(id);
+        if (question == null) { //可能页面从地址上直接写了一个不存在的问题id
+            throw new CustomizeException(CustormizeErrorCode.QUESTION_NOT_FOUND);
+        }
         UserExample userExample = new UserExample();
         userExample.createCriteria()
                 .andAccountIdEqualTo(question.getCreator());
@@ -155,7 +160,10 @@ public class QuestionService {
             QuestionExample questionExample = new QuestionExample();
             questionExample.createCriteria()
                     .andIdEqualTo(question.getId());
-            questionMapper.updateByExampleSelective(updateQuestion, questionExample);
+            int updated = questionMapper.updateByExampleSelective(updateQuestion, questionExample);
+            if (updated != 1) {
+                throw new CustomizeException(CustormizeErrorCode.QUESTION_NOT_FOUND);
+            }
         }
     }
 }
