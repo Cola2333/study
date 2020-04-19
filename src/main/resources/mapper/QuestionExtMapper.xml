@@ -32,4 +32,10 @@
     set VIEW_COUNT = VIEW_COUNT + 1
     where ID = #{id}
   </update>
+
+  <update id="incCommentCount" parameterType="life.usc.study.model.Question">
+    update QUESTION
+    set QUESTION.COMMENT_COUNT = COMMENT_COUNT + 1
+    where ID = #{id}
+  </update>
 </mapper>
