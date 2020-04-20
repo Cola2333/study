@@ -1,9 +1,8 @@
 package life.usc.study.controller;
 
-import life.usc.study.dto.CommentDTO;
+import life.usc.study.dto.CommentCreateDTO;
 import life.usc.study.dto.ResultDTO;
 import life.usc.study.exception.CustormizeErrorCode;
-import life.usc.study.mapper.CommentMapper;
 import life.usc.study.model.Comment;
 import life.usc.study.model.User;
 import life.usc.study.service.CommentService;
@@ -14,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 public class CommentController {
@@ -25,7 +22,7 @@ public class CommentController {
 
     @ResponseBody
     @PostMapping("/comment")
-    public Object post(@RequestBody CommentDTO commentDTO,
+    public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
                        HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
@@ -33,12 +30,12 @@ public class CommentController {
         }
 
         Comment comment = new Comment();
-        comment.setParentId(commentDTO.getParentId());
-        comment.setType(commentDTO.getType());
+        comment.setParentId(commentCreateDTO.getParentId());
+        comment.setType(commentCreateDTO.getType());
         comment.setGmtCreate(System.currentTimeMillis());
         comment.setGmtModified(System.currentTimeMillis());
-        comment.setContent(commentDTO.getContent());
-        comment.setCommentator(1);
+        comment.setContent(commentCreateDTO.getContent());
+        comment.setCommentator(user.getAccountId());
         comment.setLikeCount(0L);
         commentService.insert(comment);
 //        commentService.incCommentCount(comment.getParentId()); //直接这样写有bug

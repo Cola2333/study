@@ -16,7 +16,13 @@ function post() {
                $("#comment_section").hide();
            }
            else {
-               alert(response.message);
+               if (response.code == 2003) {
+                   var isAccept = confirm(response.message);
+                   if (isAccept == true) {
+                       window.open("https://github.com/login/oauth/authorize?client_id=367c20aae8ce7d906d23&redirect_uri=http://localhost:8080/callback&scope=user&state=1");
+                       window.localStorage.setItem("closable", true);
+                   }
+               }
            }
         },
         datatype: "json"
