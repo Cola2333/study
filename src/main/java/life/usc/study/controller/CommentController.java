@@ -41,7 +41,7 @@ public class CommentController {
         comment.setCommentator(1);
         comment.setLikeCount(0L);
         commentService.insert(comment);
-        commentService.incCommentCount(comment.getParentId());
+//        commentService.incCommentCount(comment.getParentId()); //直接这样写有bug
 
         return ResultDTO.okOf();
     }

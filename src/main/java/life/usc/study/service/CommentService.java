@@ -10,6 +10,9 @@ import life.usc.study.model.Comment;
 import life.usc.study.model.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.beans.Transient;
 
 @Service
 public class CommentService {
@@ -22,6 +25,7 @@ public class CommentService {
     @Autowired
     CommentMapper commentMapper;
 
+    @Transactional
     public void insert(Comment comment) {
         if (comment.getParentId() == null || comment.getParentId() == 0) {
             throw new CustomizeException(CustormizeErrorCode.TARGET_PARAM_NOT_FOUND); //会跳转一个错误页面
@@ -44,6 +48,7 @@ public class CommentService {
                 throw new CustomizeException(CustormizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
+            incCommentCount(question.getId());
         }
     }
 

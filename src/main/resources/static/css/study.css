@@ -17,6 +17,15 @@ body{
     height: 38px;
 }
 
+.media-body{
+    padding-top: 10px;
+}
+
+.comment .btn {
+    margin: 10px 0px;
+    float: right;
+}
+
 .text-desc{
     font-size: 12px;
     font-weight: normal;
