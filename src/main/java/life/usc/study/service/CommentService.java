@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -68,11 +67,12 @@ public class CommentService {
         questionExtMapper.incCommentCount(question);
     }
 
-    public List<CommentDTO> getByQuestionId(Long id) {
+    public List<CommentDTO> getByTagetId(Long id, CommentTypeEnum type) {
         CommentExample commentExample = new CommentExample();
         commentExample.createCriteria()
                 .andParentIdEqualTo(id)
-                .andTypeEqualTo(CommentTypeEnum.QUESTION.getType());
+                .andTypeEqualTo(type.getType());
+        commentExample.setOrderByClause("gmt_create desc");
         List<Comment> comments = commentMapper.selectByExample(commentExample);
         if (comments.size() == 0) {
             return new ArrayList<>();

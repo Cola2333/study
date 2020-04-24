@@ -1,6 +1,14 @@
+
+/*
+* 提交回复
+* */
 function post() {
     var questionId = $("#question_id").val();
     var commentContent = $("#comment_content").val();
+    if (!commentContent) {
+        alert("回复不能为空~");
+        return;
+    }
 
     $.ajax({
        type: "POST",
@@ -13,7 +21,7 @@ function post() {
         }),
         success: function (response) {
            if (response.code == 200) {
-               $("#comment_section").hide();
+               window.location.reload();
            }
            else {
                if (response.code == 2003) {
@@ -23,8 +31,33 @@ function post() {
                        window.localStorage.setItem("closable", true);
                    }
                }
+               else {
+                   alert(response.message);
+               }
            }
         },
         datatype: "json"
     });
+}
+
+/*
+* 展开二级评论
+* */
+function collapseComments(e) {
+    var id = e.getAttribute("data-id");
+    var comments = $("#comment_" + id);
+    var collapse = e.getAttribute("data-collapse");
+    if (collapse) {
+        //折叠二级评论
+        comments.removeClass("in");
+        //标记二级评论状态
+        e.removeAttribute("data-collapse");
+        e.classList.remove("isIn");
+    }else {
+        //展开二级评论
+        comments.addClass("in");
+        //标记二级评论状态
+        e.setAttribute("data-collapse", "in");
+        e.classList.add("isIn");
+    }
 }

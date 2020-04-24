@@ -22,7 +22,7 @@ public class CustomizeExceptionHandler {
     @ExceptionHandler(Exception.class)
     ModelAndView handle(Throwable e, Model model, HttpServletRequest request, HttpServletResponse response) {
         String contentType = request.getContentType();
-        if ("application/json".equals(contentType)) { //先判断是json格式的异常
+        if ("application/json".equals(contentType)) { //先判断是json格式的请求抛出的异常
             ResultDTO resultDTO;//用来返回json 局部刷新
             if (e instanceof CustomizeException) { //是我们已知(已经定义过的)的异常
                 resultDTO = ResultDTO.errorOf((CustomizeException) e); //保证是json格式

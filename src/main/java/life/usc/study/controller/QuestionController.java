@@ -2,6 +2,7 @@ package life.usc.study.controller;
 
 import life.usc.study.dto.CommentDTO;
 import life.usc.study.dto.QuestionDTO;
+import life.usc.study.enums.CommentTypeEnum;
 import life.usc.study.service.CommentService;
 import life.usc.study.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class QuestionController {
                            Model model) {
 
         QuestionDTO questionDTO = questionService.getById(id);
-        List<CommentDTO> commentDTOS = commentService.getByQuestionId(id);
+        List<CommentDTO> commentDTOS = commentService.getByTagetId(id, CommentTypeEnum.QUESTION);
         questionService.incViewCount(id); //阅读数累加
         model.addAttribute("question", questionDTO);
         model.addAttribute("comments", commentDTOS);

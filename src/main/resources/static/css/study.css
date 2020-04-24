@@ -26,6 +26,13 @@ body{
     float: right;
 }
 
+.sub-comment{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: 6px;
+    padding-top: 6px;
+}
+
 .text-desc{
     font-size: 12px;
     font-weight: normal;
@@ -39,6 +46,10 @@ body{
 .menu .icon{
     margin-left: 6px;
     color: #999;
+}
+
+.menu .isIn{
+    color: #2aabd2;
 }
 
 .menu .icon:hover{

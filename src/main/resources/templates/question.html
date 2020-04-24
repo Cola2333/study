@@ -47,14 +47,39 @@
                         <h5 class="media-heading" th:text="${comment.user.name}"></h5>
                         <h6 th:text="${comment.content}">我是回复内容</h6>
                         <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-comment icon" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-comment icon" aria-hidden="true" th:data-id="${comment.id}" onclick="collapseComments(this)"></span>
                         <span class="text-desc pull-right" th:text="${#dates.format(comment.gmtCreate,'yyyy/MM/dd')}"></span>
+                        <!--二级回复-->
+                        <div class="collapse" th:id="'comment_' + ${comment.id}">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-comment">
+                                <div class="media menu" th:each="comment:${comments}" >
+                                    <div class="media-left">
+                                        <a th:href="@{'/question/'+${comment.user.name}}">
+                                            <img class="media-object img-rounded" th:src="${comment.user.avatarUrl}">
+                                        </a>
+                                    </div>
+                                    <div class="media-body " >
+                                        <h5 class="media-heading" th:text="${comment.user.name}"></h5>
+                                        <h6 th:text="${comment.content}">我是回复内容</h6>
+                                        <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
+                                        <span class="glyphicon glyphicon-comment icon" aria-hidden="true" th:data-id="${comment.id}" onclick="collapseComments(this)"></span>
+                                        <span class="text-desc pull-right" th:text="${#dates.format(comment.gmtCreate,'yyyy/MM/dd')}"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-comment comment">
+                                <textarea class="form-control" rows="1"></textarea>
+                                <button type="button" class="btn btn-success">评论</button>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><hr></div>
             <!--回复框-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="comment_section">
+                <h3>
+                    <span>提交回复</span>
+                </h3>
                 <div class="media" >
                     <div class="media-left">
                         <a th:href="@{'/question/'+${question.user.name}}">
