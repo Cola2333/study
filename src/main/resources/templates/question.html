@@ -9,6 +9,7 @@
     <script src="/js/jquery-3.5.0.min.js" type="application/javascript"></script>
     <script src="/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="/js/community.js" type="application/javascript"></script>
+    <script src="/js/moment.js" type="application/javascript"></script>
 </head>
 <body>
 <div th:replace="navigation :: nav"></div>
@@ -38,12 +39,14 @@
                     <span th:text="${question.commentCount}+'个回复'"></span>
                 </h3>
                 <div class="media menu" th:each="comment:${comments}" >
+                    <!-- 头像 -->
                     <div class="media-left">
                         <a th:href="@{'/question/'+${comment.user.name}}">
                             <img class="media-object img-rounded" th:src="${comment.user.avatarUrl}">
                         </a>
                     </div>
-                    <div class="media-body " >
+                    <!-- 回复内容 -->
+                    <div class="media-body" >
                         <h5 class="media-heading" th:text="${comment.user.name}"></h5>
                         <h6 th:text="${comment.content}">我是回复内容</h6>
                         <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
@@ -51,6 +54,8 @@
                         <span class="text-desc pull-right" th:text="${#dates.format(comment.gmtCreate,'yyyy/MM/dd')}"></span>
                         <!--二级回复-->
                         <div class="collapse" th:id="'comment_' + ${comment.id}">
+                            <!-- 需要js传入 -->
+                            <!--
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-comment">
                                 <div class="media menu" th:each="comment:${comments}" >
                                     <div class="media-left">
@@ -58,7 +63,7 @@
                                             <img class="media-object img-rounded" th:src="${comment.user.avatarUrl}">
                                         </a>
                                     </div>
-                                    <div class="media-body " >
+                                    <div class="media-body" th:id="comment_id">
                                         <h5 class="media-heading" th:text="${comment.user.name}"></h5>
                                         <h6 th:text="${comment.content}">我是回复内容</h6>
                                         <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
@@ -67,15 +72,17 @@
                                     </div>
                                 </div>
                             </div>
+                            -->
+
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sub-comment comment">
-                                <textarea class="form-control" rows="1"></textarea>
-                                <button type="button" class="btn btn-success">评论</button>
+                                <textarea class="form-control" rows="1" th:id="'reply_content_'+${comment.id}"></textarea>
+                                <button type="button" class="btn btn-success" onclick="reply(this)" th:data-id="${comment.id}">评论</button>
                             </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><hr></div>
-            <!--回复框-->
+            <!--回复框
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="comment_section">
                 <h3>
                     <span>提交回复</span>
