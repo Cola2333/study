@@ -20,7 +20,7 @@ public class IndexController {
     public String index(HttpServletRequest request,
                         Model model,
                         @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum,
-                        @RequestParam(name = "size", defaultValue = "2") Integer size) {
+                        @RequestParam(name = "size", defaultValue = "5") Integer size) {
 
         PaginationDTO pagination = questionService.list(pageNum, size);
         model.addAttribute("questionList", pagination); //其实应该叫name应该是pagination 懒得改了

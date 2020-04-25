@@ -4,10 +4,7 @@ import life.usc.study.dto.CommentDTO;
 import life.usc.study.enums.CommentTypeEnum;
 import life.usc.study.exception.CustomizeException;
 import life.usc.study.exception.CustormizeErrorCode;
-import life.usc.study.mapper.CommentMapper;
-import life.usc.study.mapper.QuestionExtMapper;
-import life.usc.study.mapper.QuestionMapper;
-import life.usc.study.mapper.UserMapper;
+import life.usc.study.mapper.*;
 import life.usc.study.model.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +28,9 @@ public class CommentService {
     CommentMapper commentMapper;
 
     @Autowired
+    CommentExtMapper commentExtMapper;
+
+    @Autowired
     UserMapper userMapper;
 
     @Transactional
@@ -49,6 +49,9 @@ public class CommentService {
                 throw new CustomizeException(CustormizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
+//            incCommentCount(dbComment.getParentId());
+            dbComment.setCommentCount(1); //这个1用来向数据库传值 并不会将数据库中的commentCount改成1
+            commentExtMapper.incCommentCount(dbComment);
 
         }else { //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
@@ -56,16 +59,17 @@ public class CommentService {
                 throw new CustomizeException(CustormizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
-            incCommentCount(question.getId());
+//            incCommentCount(question.getId());
+            questionExtMapper.incCommentCount(question); // 没要考虑多并发的写法
         }
     }
 
 
-    public void incCommentCount(Long parentId) {
-        Question question = new Question();
-        question.setId(parentId);
-        questionExtMapper.incCommentCount(question);
-    }
+//    public void incCommentCount(Long parentId) {
+//        Question question = new Question();
+//        question.setId(parentId);
+//        questionExtMapper.incCommentCount(question);
+//    }
 
     public List<CommentDTO> getByTagetId(Long id, CommentTypeEnum type) {
         CommentExample commentExample = new CommentExample();

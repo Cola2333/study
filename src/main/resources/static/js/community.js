@@ -1,6 +1,6 @@
 
 /*
-* 提交回复
+* 提交问题回复
 * */
 function post() {
     var questionId = $("#question_id").val();
@@ -9,12 +9,18 @@ function post() {
 
 }
 
+/*
+* 提交评论回复
+* */
 function reply(e) {
     var commentId = e.getAttribute("data-id");
     var replyContent = $("#reply_content_" + commentId).val();
     comment2target(commentId, 2, replyContent);
 }
 
+/*
+* 对公用函数进行封装
+* */
 function comment2target(targetId, type, commentContent) {
     if (!commentContent) {
         alert("回复不能为空~");

@@ -38,4 +38,9 @@
     set QUESTION.COMMENT_COUNT = COMMENT_COUNT + 1
     where ID = #{id}
   </update>
+
+  <select id="selectRelated" parameterType="life.usc.study.model.Question" resultMap="BaseResultMap">
+    select * from QUESTION where id != #{id} and tag regexp #{tag};
+  </select>
+
 </mapper>
