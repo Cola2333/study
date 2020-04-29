@@ -60,6 +60,20 @@ body{
     margin-right: 10px;
 }
 
+.question-wechat {
+    width: 200px;
+}
+
+.related-questions{
+    text-decoration: none;
+    list-style: none;
+    padding-left: 5px;
+}
+
+.related-questions .related-a:hover{
+    text-decoration: none;
+}
+
 /*.study-menu{*/
 /*    color: #999;*/
 /*    font-size: 13px;*/

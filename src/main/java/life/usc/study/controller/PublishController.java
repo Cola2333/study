@@ -1,9 +1,11 @@
 package life.usc.study.controller;
 
+import life.usc.study.cache.TagCache;
 import life.usc.study.mapper.QuestionMapper;
 import life.usc.study.model.Question;
 import life.usc.study.model.User;
 import life.usc.study.service.QuestionService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,11 +33,13 @@ public class PublishController {
         model.addAttribute("description", question.getDescription());
         model.addAttribute("tag", question.getTag());
         model.addAttribute("id", id);
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
 
     @GetMapping("/publish")
-    public String publish() {
+    public String publish(Model model) {
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
 
@@ -49,6 +53,8 @@ public class PublishController {
         model.addAttribute("title", title);
         model.addAttribute("description", decription);
         model.addAttribute("tag", tag);
+        model.addAttribute("tags", TagCache.get());
+
 
         if(title == null || title == "") {
             model.addAttribute("error", "标题不可为空");
@@ -57,6 +63,17 @@ public class PublishController {
 
         if(decription == null || decription == "") {
             model.addAttribute("error", "描述不可为空");
+            return "publish";
+        }
+
+        if(tag == null || tag == "") {
+            model.addAttribute("error", "标签不可为空");
+            return "publish";
+        }
+
+        String invalid = TagCache.filterInvalid(tag);
+        if (StringUtils.isNotBlank(invalid)) {
+            model.addAttribute("error", "标签非法");
             return "publish";
         }
 

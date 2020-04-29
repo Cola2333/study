@@ -130,12 +130,20 @@
                         <span></span>
                     </div>
                 </div>
+                <hr>
             </div>
+            <!--微信号-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
+                <h3>感兴趣的话 关注我呦~</h3>
+                <img src="/img/weChat.JPG" alt="..." class="img-thumbnail question-wechat">
+                <hr>
+            </div>
+            <!--相关问题-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
                 <h3>相关问题</h3>
-                <ul>
+                <ul class="related-questions">
                     <li th:each="related : ${relatedQuestions}">
-                        <a th:href="@{'/question/'+${related.id}}" th:text="${related.getTitle()}"></a>
+                        <a class="related-a" th:href="@{'/question/'+${related.id}}" th:text="${related.getTitle()}"></a>
                     </li>
                 </ul>
             </div>
