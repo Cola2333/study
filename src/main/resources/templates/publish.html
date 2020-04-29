@@ -30,17 +30,17 @@
                 <div class="form-group">
                     <label for="title">添加标签</label>
                     <input type="text" class="form-control" id="tag" name="tag" placeholder="添加标签" th:value="${tag}" onclick="showSelectTag()">
-                    <div id="select_tag" style="display: none">
+                    <div id="select_tag" style="display: none" >
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" th:each="category: ${tags}">
+                            <li role="presentation" th:each="category, categoryState: ${tags}" th:class="${categoryState.first ? 'active' : ''}">
                                 <a th:href="'#'+${category.categoryName}" aria-controls="home" role="tab" data-toggle="tab" th:text="${category.categoryName}"></a>
                             </li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane" th:each="category: ${tags}" th:id="${category.categoryName}">
+                            <div role="tabpanel" th:each="category, categoryState: ${tags}" th:id="${category.categoryName}" th:class="${categoryState.first ? 'tab-pane active' : 'tab-pane'}">
                                 <span class="glyphicon glyphicon-tags label label-info question-tag" th:each="tag:${category.tags}" th:text="' '+${tag}" th:data-tag="${tag}" onclick="selectTag(this)" ></span>
                             </div>
                         </div>
