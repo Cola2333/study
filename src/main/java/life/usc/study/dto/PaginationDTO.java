@@ -1,16 +1,13 @@
 package life.usc.study.dto;
 
-import life.usc.study.model.Question;
 import lombok.Data;
-import org.h2.store.Page;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 @Data
-public class PaginationDTO {
-    private List<QuestionDTO> questions;
+public class PaginationDTO<T> {
+    private List<T> data;
     private boolean firstPage;
     private boolean previousPage;
     private boolean nextPage;
@@ -19,8 +16,8 @@ public class PaginationDTO {
     private Integer totalPage;
     private LinkedList<Integer> pages;
 
-    public void setPagination(List<QuestionDTO> questions, Integer pageNum, Integer totalPage) {
-        this.questions = questions;
+    public void setPagination(List<T> data, Integer pageNum, Integer totalPage) {
+        this.data = data;
         this.curPage = pageNum;
         this.totalPage =totalPage;
 

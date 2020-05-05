@@ -2,6 +2,8 @@ package life.usc.study.service;
 
 import life.usc.study.dto.CommentDTO;
 import life.usc.study.enums.CommentTypeEnum;
+import life.usc.study.enums.NotificationStatusEnum;
+import life.usc.study.enums.NotificationTypeEnum;
 import life.usc.study.exception.CustomizeException;
 import life.usc.study.exception.CustormizeErrorCode;
 import life.usc.study.mapper.*;
@@ -33,6 +35,9 @@ public class CommentService {
     @Autowired
     UserMapper userMapper;
 
+    @Autowired
+    NotificationMapper notificationMapper;
+
     @Transactional
     public void insert(Comment comment) {
         if (comment.getParentId() == null || comment.getParentId() == 0) {
@@ -53,6 +58,9 @@ public class CommentService {
             dbComment.setCommentCount(1); //这个1用来向数据库传值 并不会将数据库中的commentCount改成1
             commentExtMapper.incCommentCount(dbComment);
 
+            //创建notify
+            createNotify(comment, dbComment.getCommentator(), NotificationTypeEnum.REPLY_COMMENT);
+
         }else { //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
             if (question == null) {
@@ -60,8 +68,22 @@ public class CommentService {
             }
             commentMapper.insert(comment);
 //            incCommentCount(question.getId());
-            questionExtMapper.incCommentCount(question); // 没要考虑多并发的写法
+            questionExtMapper.incCommentCount(question); // 没有考虑多并发的写法
+
+            //创建notify
+            createNotify(comment, question.getCreator(), NotificationTypeEnum.REPLY_QUESTION);
         }
+    }
+
+    private void createNotify(Comment comment, String receiver, NotificationTypeEnum notificationType) {
+        Notification notification = new Notification();
+        notification.setReceiver(receiver);
+        notification.setNotifier(comment.getCommentator());
+        notification.setOuterId(comment.getParentId());
+        notification.setType(notificationType.getType());
+        notification.setStatus(NotificationStatusEnum.UNREDE.getStatus());
+        notification.setGmtCreate(System.currentTimeMillis());
+        notificationMapper.insert(notification);
     }
 
 

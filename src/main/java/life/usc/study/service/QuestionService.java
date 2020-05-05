@@ -34,6 +34,9 @@ public class QuestionService {
     @Autowired
     QuestionExtMapper questionExtMapper;
 
+    /*
+    * 首页分页显示
+    * */
     public PaginationDTO list(Integer pageNum, Integer size) {
         Integer totalCount = (int)questionMapper.countByExample(new QuestionExample());
         //Integer totalCount = questionMapper.countTotal();
@@ -79,11 +82,14 @@ public class QuestionService {
         /*
         * 得到了所需的全部属性 一起赋值
         * */
-        PaginationDTO paginationDTO = new PaginationDTO();
+        PaginationDTO<QuestionDTO> paginationDTO = new PaginationDTO();
         paginationDTO.setPagination(questionDTOS, pageNum, totalPage);
         return paginationDTO;
     }
 
+    /*
+    * 我发布的问题分页显示
+    * */
     public PaginationDTO list(Integer pageNum, Integer size, String accountId) {
         QuestionExample questionExample = new QuestionExample();
         questionExample.createCriteria()
@@ -133,7 +139,7 @@ public class QuestionService {
         /*
          * 得到了所需的全部属性 一起赋值
          * */
-        PaginationDTO paginationDTO = new PaginationDTO();
+        PaginationDTO<QuestionDTO> paginationDTO = new PaginationDTO();
         paginationDTO.setPagination(questionDTOS, pageNum, totalPage);
         return paginationDTO;
     }
