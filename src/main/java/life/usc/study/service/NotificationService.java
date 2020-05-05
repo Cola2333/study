@@ -3,7 +3,10 @@ package life.usc.study.service;
 import life.usc.study.dto.NotificationDTO;
 import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
+import life.usc.study.enums.NotificationStatusEnum;
 import life.usc.study.enums.NotificationTypeEnum;
+import life.usc.study.exception.CustomizeException;
+import life.usc.study.exception.CustormizeErrorCode;
 import life.usc.study.mapper.NotificationMapper;
 import life.usc.study.mapper.QuestionMapper;
 import life.usc.study.mapper.UserMapper;
@@ -58,6 +61,7 @@ public class NotificationService {
 
         /* 查出当前用户所有notification */
         NotificationExample example = new NotificationExample();
+        example.setOrderByClause("gmt_create desc"); //倒序排列
         example.createCriteria()
                 .andReceiverEqualTo(accountId);
         List<Notification> notifications = notificationMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
@@ -74,7 +78,7 @@ public class NotificationService {
         /* 拿到所有被回复的question */
         List<Question> questions = new ArrayList<>();
         for (Notification notification :notifications) {
-            if (notification.getType() == 1) { // 如果有if 怎么用java8写
+            if (notification.getType() == NotificationTypeEnum.REPLY_QUESTION.getType() || notification.getType() == NotificationTypeEnum.REPLY_COMMENT.getType()) { // 如果有if 怎么用java8写
                 Question question = questionMapper.selectByPrimaryKey(notification.getOuterId());
                 questions.add(question);
             }
@@ -108,5 +112,16 @@ public class NotificationService {
                 andStatusEqualTo(0);
         long unreadCount = notificationMapper.countByExample(notificationExample);
         return unreadCount;
+    }
+
+    public Notification read(Long id) {
+        Notification notification = notificationMapper.selectByPrimaryKey(id);
+        if (notification == null) {
+            throw new CustomizeException(CustormizeErrorCode.QUESTION_NOT_FOUND);
+        }
+
+        notification.setStatus(NotificationStatusEnum.READE.getStatus()); //标记为已读
+        notificationMapper.updateByPrimaryKey(notification);
+        return notification;
     }
 }

@@ -59,7 +59,7 @@ public class CommentService {
             commentExtMapper.incCommentCount(dbComment);
 
             //创建notify
-            createNotify(comment, dbComment.getCommentator(), NotificationTypeEnum.REPLY_COMMENT);
+            createNotify(comment, dbComment.getCommentator(), NotificationTypeEnum.REPLY_COMMENT, dbComment.getParentId());
 
         }else { //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
@@ -71,15 +71,15 @@ public class CommentService {
             questionExtMapper.incCommentCount(question); // 没有考虑多并发的写法
 
             //创建notify
-            createNotify(comment, question.getCreator(), NotificationTypeEnum.REPLY_QUESTION);
+            createNotify(comment, question.getCreator(), NotificationTypeEnum.REPLY_QUESTION, comment.getParentId());
         }
     }
 
-    private void createNotify(Comment comment, String receiver, NotificationTypeEnum notificationType) {
+    private void createNotify(Comment comment, String receiver, NotificationTypeEnum notificationType, Long outerId) {
         Notification notification = new Notification();
         notification.setReceiver(receiver);
         notification.setNotifier(comment.getCommentator());
-        notification.setOuterId(comment.getParentId());
+        notification.setOuterId(outerId); // 永远拿question的Id 但是此处有bug 无法保证回复评论时传过来的参数是question
         notification.setType(notificationType.getType());
         notification.setStatus(NotificationStatusEnum.UNREDE.getStatus());
         notification.setGmtCreate(System.currentTimeMillis());

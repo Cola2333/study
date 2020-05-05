@@ -41,8 +41,9 @@
 
             <!--最新回复-->
             <div class="media" th:each="question:${questionList.data}" th:if="${section} == 'reply'">
-                <a th:href="@{'/question/'+${question.outerId}}">
-                    <h4 th:text="${question.notifierName} + ' ' +  ${question.type} + ' ' + ${question.outerTitle}"></h4>
+                <a th:href="@{'/notification/'+${question.id}}">
+                    <span th:text="${question.notifierName} + ' ' +  ${question.type} + ' ' + ${question.outerTitle}"></span>
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true" th:if="${question.status} == 0" >
                 </a>
             </div>
 
@@ -76,7 +77,7 @@
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 " >
             <div class="list-group section">
                 <a href="/profile/question" th:class="${section}=='question' ? 'list-group-item active' : 'list-group-item'">
-                    <span class="badge">14</span>
+                    <span class="badge">...</span>
                     我的提问
                 </a>
                 <a href="/profile/reply" th:class="${section}=='reply' ? 'list-group-item active' : 'list-group-item'">
