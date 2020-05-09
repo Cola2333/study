@@ -25,6 +25,7 @@ public class IndexController {
 
         PaginationDTO pagination = questionService.show(pageNum, size, search);
         model.addAttribute("questionList", pagination); //其实应该叫name应该是pagination 懒得改了
+        model.addAttribute("search", search);
 
 
         return "index";
