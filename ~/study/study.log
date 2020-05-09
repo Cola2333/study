@@ -1,0 +1,11 @@
+2020-05-09 11:27:42.663  INFO 18688 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 18688 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-09 11:27:42.667  INFO 18688 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-09 11:27:43.966  INFO 18688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-09 11:27:43.976  INFO 18688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-09 11:27:43.976  INFO 18688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-09 11:27:44.081  INFO 18688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-09 11:27:44.082  INFO 18688 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1347 ms
+2020-05-09 11:27:44.766  INFO 18688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-09 11:27:44.857  INFO 18688 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-09 11:27:45.156  INFO 18688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-09 11:27:45.159  INFO 18688 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.029 seconds (JVM running for 5.179)
