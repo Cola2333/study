@@ -2,6 +2,7 @@ package life.usc.study.service;
 
 import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
+import life.usc.study.dto.QuestionQueryDTO;
 import life.usc.study.exception.CustomizeException;
 import life.usc.study.exception.CustormizeErrorCode;
 import life.usc.study.mapper.QuestionExtMapper;
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -37,8 +39,14 @@ public class QuestionService {
     /*
     * 首页分页显示
     * */
-    public PaginationDTO list(Integer pageNum, Integer size) {
-        Integer totalCount = (int)questionMapper.countByExample(new QuestionExample());
+    public PaginationDTO show(Integer pageNum, Integer size, String search) {
+        if (StringUtils.isNotBlank(search)) {
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays.stream(tags).collect(Collectors.joining(" | "));
+        }
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount = (int)questionExtMapper.countBySearch(questionQueryDTO);
         //Integer totalCount = questionMapper.countTotal();
         Integer totalPage;
 
@@ -62,9 +70,9 @@ public class QuestionService {
 
         Integer offset = (pageNum - 1) * size;// limit子句中的第一个参数
 
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.setOrderByClause("gmt_create desc"); // 倒序排列
-        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(questionExample, new RowBounds(offset, size));
+        questionQueryDTO.setOffset(offset);
+        questionQueryDTO.setSize(size);
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
         //List<Question> questions = questionMapper.getAllQuestions(offset, size);
         List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question
         for (Question question : questions) {
@@ -121,6 +129,7 @@ public class QuestionService {
         QuestionExample example = new QuestionExample();
         example.createCriteria()
                 .andCreatorEqualTo(accountId);
+        example.setOrderByClause("gmt_create desc");
         List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(example, new RowBounds(offset, size));
         //List<Question> questions = questionMapper.getAllQuestions(offset, size);
         List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question

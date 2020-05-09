@@ -66,6 +66,7 @@ public class CommentService {
             if (question == null) {
                 throw new CustomizeException(CustormizeErrorCode.COMMENT_NOT_FOUND);
             }
+            comment.setCommentCount(0); // 初始化为0
             commentMapper.insert(comment);
 //            incCommentCount(question.getId());
             questionExtMapper.incCommentCount(question); // 没有考虑多并发的写法
@@ -76,6 +77,8 @@ public class CommentService {
     }
 
     private void createNotify(Comment comment, String receiver, NotificationTypeEnum notificationType, Long outerId) {
+        if (receiver == comment.getCommentator())
+            return;
         Notification notification = new Notification();
         notification.setReceiver(receiver);
         notification.setNotifier(comment.getCommentator());

@@ -20,9 +20,10 @@ public class IndexController {
     public String index(HttpServletRequest request,
                         Model model,
                         @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum,
-                        @RequestParam(name = "size", defaultValue = "5") Integer size) {
+                        @RequestParam(name = "size", defaultValue = "5") Integer size,
+                        @RequestParam(name= "search", required = false) String search) {
 
-        PaginationDTO pagination = questionService.list(pageNum, size);
+        PaginationDTO pagination = questionService.show(pageNum, size, search);
         model.addAttribute("questionList", pagination); //其实应该叫name应该是pagination 懒得改了
 
 

@@ -76,15 +76,20 @@ public class NotificationService {
         Map<String, User> userMap = users.stream().collect(Collectors.toMap(user -> user.getAccountId(), user -> user));
 
         /* 拿到所有被回复的question */
-        List<Question> questions = new ArrayList<>();
-        for (Notification notification :notifications) {
-            if (notification.getType() == NotificationTypeEnum.REPLY_QUESTION.getType() || notification.getType() == NotificationTypeEnum.REPLY_COMMENT.getType()) { // 如果有if 怎么用java8写
-                Question question = questionMapper.selectByPrimaryKey(notification.getOuterId());
-                questions.add(question);
-            }
-        }
+//        List<Question> questions = new ArrayList<>();
+//        for (Notification notification :notifications) {
+//            if (notification.getType() == NotificationTypeEnum.REPLY_QUESTION.getType() || notification.getType() == NotificationTypeEnum.REPLY_COMMENT.getType()) { // 如果有if 怎么用java8写
+//                Question question = questionMapper.selectByPrimaryKey(notification.getOuterId());
+//                questions.add(question);
+//            }
+//        }
+        List<Long> questionId = notifications.stream().map(notification -> notification.getOuterId()).distinct().collect(Collectors.toList()); //如果有if怎么写
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.createCriteria().
+                andIdIn(questionId);
+        List<Question> questions = questionMapper.selectByExample(questionExample);
         // 生成questionMap
-        Map<Long, Question> questionMap = questions.stream().collect(Collectors.toMap(question -> question.getId(), question -> question));
+        Map<Long, Question> questionMap = questions.stream().distinct().collect(Collectors.toMap(question -> question.getId(), question -> question));
 
         /* 生成notificationDTO */
         List<NotificationDTO> notificationDTOS = notifications.stream().map(notification -> {
@@ -117,7 +122,7 @@ public class NotificationService {
     public Notification read(Long id) {
         Notification notification = notificationMapper.selectByPrimaryKey(id);
         if (notification == null) {
-            throw new CustomizeException(CustormizeErrorCode.QUESTION_NOT_FOUND);
+            throw new CustomizeException(CustormizeErrorCode.NOTIFICATION_NOT_FOUND);
         }
 
         notification.setStatus(NotificationStatusEnum.READE.getStatus()); //标记为已读

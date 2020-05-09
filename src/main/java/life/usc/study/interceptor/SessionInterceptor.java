@@ -3,6 +3,7 @@ package life.usc.study.interceptor;
 import life.usc.study.mapper.UserMapper;
 import life.usc.study.model.User;
 import life.usc.study.model.UserExample;
+import life.usc.study.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -17,6 +18,9 @@ public class SessionInterceptor implements HandlerInterceptor {
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    NotificationService notificationService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -33,6 +37,9 @@ public class SessionInterceptor implements HandlerInterceptor {
                     //System.out.println(user);
                     if (users.size() != 0) {
                         request.getSession().setAttribute("user", users.get(0));
+                        Long unreadCount = notificationService.unreadCount(users.get(0).getAccountId());
+                        //让导航栏也可以显示未读信息
+                        request.getSession().setAttribute("unreadCount", unreadCount);
                     }
                     break;
                 }

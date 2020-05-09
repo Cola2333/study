@@ -36,7 +36,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="/profile/question">我的问题</a></li>
-                            <li><a href="/profile/reply">通知<span class="badge">42</span></a></li>
+                            <li><a href="/profile/reply">通知<span class="badge" th:text="${session.unreadCount}"></span></a></li>
                             <li><a href="/logOut">退出登录</a></li>
                         </ul>
                     </li>

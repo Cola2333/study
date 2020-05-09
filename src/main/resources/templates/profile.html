@@ -31,7 +31,7 @@
                     <a th:href="@{'/question/'+${question.id}}">
                         <h4 class="media-heading" th:text="${question.title}"></h4>
                     </a>
-                    <span th:text="${question.description}"></span><br>
+<!--                    <span th:text="${question.description}"></span><br>-->
                     <span class="text-desc" th:text="${question.commentCount}+'个回复 | '+${question.viewCount}+'个浏览 | '+${#dates.format(question.gmtCreate,'yyyy/MM/dd HH:mm')}+'创建'"> </span>
                     <div>
                         <a th:href="'/publish/'+${question.id}" class="text-desc"><span class="glyphicon glyphicon-pencil" aria-hidden="true"th:if="${session.user}!=null and ${session.user.accountId} eq ${question.creator}" >编辑</span></a>
@@ -81,7 +81,7 @@
                     我的提问
                 </a>
                 <a href="/profile/reply" th:class="${section}=='reply' ? 'list-group-item active' : 'list-group-item'">
-                    <span class="badge" th:text="${unreadCount}"></span>
+                    <span class="badge" th:text="${session.unreadCount}"></span>
                     最新回复
                 </a>
                 <a href="#" class="list-group-item">Porta ac consectetur ac</a>
