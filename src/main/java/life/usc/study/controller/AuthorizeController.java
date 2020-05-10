@@ -5,6 +5,7 @@ import life.usc.study.dto.GitHubUser;
 import life.usc.study.model.User;
 import life.usc.study.provide.GitHubProvider;
 import life.usc.study.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Controller
+@Slf4j
 public class AuthorizeController {
 
     @Autowired
@@ -60,6 +62,8 @@ public class AuthorizeController {
             response.addCookie(new Cookie("token", token));
             return "redirect:/";
         }else {
+            log.error("callback get github error, {}", gitHubUser);
+            //登录失败
             return "redirect:/";
         }
     }
