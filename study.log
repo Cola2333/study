@@ -1737,3 +1737,363 @@
 2020-05-10 15:24:02.458 DEBUG 13824 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
 2020-05-10 15:24:02.458 DEBUG 13824 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
 2020-05-10 15:24:02.459 DEBUG 13824 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:52:50.143  INFO 20280 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 20280 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-10 15:52:50.146  INFO 20280 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-10 15:52:51.490  INFO 20280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-10 15:52:51.503  INFO 20280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 15:52:51.509  INFO 20280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 15:52:51.606  INFO 20280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 15:52:51.607  INFO 20280 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1405 ms
+2020-05-10 15:52:52.229  INFO 20280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:52:52.287  INFO 20280 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-10 15:52:52.520  INFO 20280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-10 15:52:52.523  INFO 20280 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 2.8 seconds (JVM running for 4.911)
+2020-05-10 15:53:00.552  INFO 20280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-10 15:53:00.552  INFO 20280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-10 15:53:00.560  INFO 20280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-05-10 15:53:00.623  INFO 20280 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-10 15:53:00.757  INFO 20280 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-10 15:53:00.764 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 15:53:00.782 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: e4763255-cfe5-4669-b7e1-a9edbd8d49ad(String)
+2020-05-10 15:53:00.795 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:00.808 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-10 15:53:00.811 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-10 15:53:00.814 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-10 15:53:00.834 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-10 15:53:00.835 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-10 15:53:00.836 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-10 15:53:00.837 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-10 15:53:00.838 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-10 15:53:00.845 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-10 15:53:00.846 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:00.846 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 15:53:00.847 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:00.851 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:00.852 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:53:00.854 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:00.855 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:00.855 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 15:53:00.855 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:00.856 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:00.856 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:53:00.857 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:00.857 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:00.857 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:53:00.858 DEBUG 20280 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:01.391 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 15:53:01.391 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: e4763255-cfe5-4669-b7e1-a9edbd8d49ad(String)
+2020-05-10 15:53:01.392 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:01.394 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-10 15:53:01.394 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-10 15:53:01.395 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-10 15:53:01.403 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 15:53:01.403 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: e4763255-cfe5-4669-b7e1-a9edbd8d49ad(String)
+2020-05-10 15:53:01.404 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:01.405 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-10 15:53:01.405 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-10 15:53:01.406 DEBUG 20280 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-10 15:53:03.360 DEBUG 20280 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 15:53:03.361 DEBUG 20280 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: e4763255-cfe5-4669-b7e1-a9edbd8d49ad(String)
+2020-05-10 15:53:03.361 DEBUG 20280 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:03.363 DEBUG 20280 --- [http-nio-8080-exec-3] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-10 15:53:03.364 DEBUG 20280 --- [http-nio-8080-exec-3] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-10 15:53:03.366 DEBUG 20280 --- [http-nio-8080-exec-3] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-10 15:53:03.377 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 15:53:03.378 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: (String)
+2020-05-10 15:53:03.379 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-05-10 15:53:03.382 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-10 15:53:03.382 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-10 15:53:03.382 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-10 15:53:03.383 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-10 15:53:03.383 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-10 15:53:03.385 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-10 15:53:03.386 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:03.387 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 15:53:03.388 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:03.388 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:03.389 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:53:03.389 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:03.390 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:03.390 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 15:53:03.391 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:03.391 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:03.392 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:53:03.392 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:03.393 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:53:03.393 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:53:03.394 DEBUG 20280 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:53:40.833  INFO 32636 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 32636 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-10 15:53:40.838  INFO 32636 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-10 15:53:42.388  INFO 32636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-10 15:53:42.398  INFO 32636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 15:53:42.399  INFO 32636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 15:53:42.507  INFO 32636 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 15:53:42.508  INFO 32636 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1573 ms
+2020-05-10 15:53:43.195  INFO 32636 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:53:43.359  INFO 32636 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-10 15:53:43.575  INFO 32636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-10 15:53:43.579  INFO 32636 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.353 seconds (JVM running for 5.64)
+2020-05-10 15:54:12.928  INFO 32636 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:54:29.569  INFO 16468 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 16468 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-10 15:54:29.574  INFO 16468 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-10 15:54:31.060  INFO 16468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-10 15:54:31.072  INFO 16468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 15:54:31.073  INFO 16468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 15:54:31.179  INFO 16468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 15:54:31.180  INFO 16468 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1517 ms
+2020-05-10 15:54:31.869  INFO 16468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:54:32.026  INFO 16468 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-10 15:54:32.257  INFO 16468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-10 15:54:32.261  INFO 16468 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.387 seconds (JVM running for 5.467)
+2020-05-10 15:54:46.874  INFO 16468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-10 15:54:46.875  INFO 16468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-10 15:54:46.882  INFO 16468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-05-10 15:54:46.955  INFO 16468 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-10 15:54:48.044 ERROR 16468 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:617) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.message.DbException.get(DbException.java:194) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.db.MVTableEngine$Store.convertIllegalStateException(MVTableEngine.java:193) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:173) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Database.getPageStore(Database.java:2739) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Database.open(Database.java:769) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Database.openDatabase(Database.java:319) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Database.<init>(Database.java:313) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Engine.openSession(Engine.java:69) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Engine.openSession(Engine.java:201) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Engine.createSession(Engine.java:161) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.Engine.createSession(Engine.java:31) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.Driver.connect(Driver.java:69) ~[h2-1.4.199.jar:1.4.199]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554) [HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.2.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) [mybatis-3.5.3.jar:3.5.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) [mybatis-spring-2.0.3.jar:2.0.3]
+	at com.sun.proxy.$Proxy64.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) [mybatis-spring-2.0.3.jar:2.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) [mybatis-3.5.3.jar:3.5.3]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) [mybatis-3.5.3.jar:3.5.3]
+	at com.sun.proxy.$Proxy65.selectByExample(Unknown Source) [na:na]
+	at life.usc.study.interceptor.SessionInterceptor.preHandle(SessionInterceptor.java:36) [classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/WANG/study.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.FileStore.open(FileStore.java:172) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343) ~[h2-1.4.199.jar:1.4.199]
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162) ~[h2-1.4.199.jar:1.4.199]
+	... 88 common frames omitted
+
+2020-05-10 15:55:09.239  INFO 16468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:56:02.415  INFO 35408 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 35408 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-10 15:56:02.420  INFO 35408 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-10 15:56:03.857  INFO 35408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-10 15:56:03.872  INFO 35408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 15:56:03.872  INFO 35408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 15:56:03.987  INFO 35408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 15:56:03.987  INFO 35408 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1485 ms
+2020-05-10 15:56:04.652  INFO 35408 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:56:04.806  INFO 35408 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-10 15:56:05.041  INFO 35408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-10 15:56:05.045  INFO 35408 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.205 seconds (JVM running for 5.355)
+2020-05-10 15:56:14.875  INFO 35408 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-10 15:56:14.875  INFO 35408 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-10 15:56:14.883  INFO 35408 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-05-10 15:56:14.963  INFO 35408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-10 15:56:15.147  INFO 35408 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-10 15:56:15.158 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 15:56:15.183 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: (String)
+2020-05-10 15:56:15.198 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-05-10 15:56:15.233 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-10 15:56:15.235 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-10 15:56:15.237 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-10 15:56:15.237 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-10 15:56:15.239 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-10 15:56:15.247 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-10 15:56:15.248 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:56:15.250 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 15:56:15.251 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:56:15.257 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:56:15.258 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:56:15.258 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:56:15.259 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:56:15.260 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 15:56:15.260 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:56:15.261 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:56:15.261 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:56:15.262 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:56:15.263 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 15:56:15.263 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 15:56:15.264 DEBUG 35408 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 15:56:43.768  INFO 35408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-10 15:56:43.770  INFO 35408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-10 15:56:43.773  INFO 35408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-10 16:05:35.735  INFO 21828 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 21828 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-10 16:05:35.738  INFO 21828 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-10 16:05:37.124  INFO 21828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-10 16:05:37.132  INFO 21828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-10 16:05:37.132  INFO 21828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-10 16:05:37.216  INFO 21828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-10 16:05:37.217  INFO 21828 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1426 ms
+2020-05-10 16:05:37.782  INFO 21828 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-10 16:05:37.841  INFO 21828 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-10 16:05:38.120  INFO 21828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-10 16:05:38.123  INFO 21828 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 2.82 seconds (JVM running for 4.76)
+2020-05-10 16:05:44.681  INFO 21828 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-10 16:05:44.682  INFO 21828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-10 16:05:44.689  INFO 21828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-05-10 16:05:44.746  INFO 21828 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-10 16:05:44.882  INFO 21828 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-10 16:05:44.893 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 16:05:44.910 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: (String)
+2020-05-10 16:05:44.924 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-05-10 16:05:44.947 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-10 16:05:44.948 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-10 16:05:44.951 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-10 16:05:44.952 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-10 16:05:44.953 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-10 16:05:44.961 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-10 16:05:44.962 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:05:44.962 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 16:05:44.963 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:05:44.969 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:05:44.969 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:05:44.970 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:05:44.971 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:05:44.972 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 16:05:44.972 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:05:44.973 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:05:44.973 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:05:44.974 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:05:44.974 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:05:44.975 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:05:44.975 DEBUG 21828 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:25.454 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 16:06:25.455 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: (String)
+2020-05-10 16:06:25.456 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-05-10 16:06:25.458 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-10 16:06:25.458 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-10 16:06:25.458 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-10 16:06:25.459 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-10 16:06:25.459 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-10 16:06:25.462 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-10 16:06:25.463 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:25.463 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 16:06:25.464 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:25.465 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:25.465 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:25.465 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:25.466 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:25.467 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 16:06:25.467 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:25.469 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:25.469 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:25.470 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:25.471 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:25.472 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:25.473 DEBUG 21828 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:27.579 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 16:06:27.580 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: (String)
+2020-05-10 16:06:27.580 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-05-10 16:06:30.456 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.457 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:30.457 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:30.460 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.m.U.updateByExampleSelective       : ==>  Preparing: update USER SET NAME = ?, TOKEN = ?, GMT_MODIFIED = ?, BIO = ?, AVATAR_URL = ? WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.462 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.m.U.updateByExampleSelective       : ==> Parameters: Junjiewa(String), 868de032-19f9-4456-a98b-be0efd263e85(String), 1589151990457(Long), Be lazy(String), https://avatars0.githubusercontent.com/u/50670561?v=4(String), 50670561(String)
+2020-05-10 16:06:30.466 DEBUG 21828 --- [http-nio-8080-exec-4] l.u.s.m.U.updateByExampleSelective       : <==    Updates: 1
+2020-05-10 16:06:30.478 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-10 16:06:30.478 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 868de032-19f9-4456-a98b-be0efd263e85(String)
+2020-05-10 16:06:30.479 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:30.487 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-10 16:06:30.488 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-10 16:06:30.493 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-10 16:06:30.494 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-10 16:06:30.495 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-10 16:06:30.495 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-10 16:06:30.496 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-10 16:06:30.496 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-10 16:06:30.498 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-10 16:06:30.499 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.500 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 16:06:30.500 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:30.501 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.501 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:30.501 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:30.502 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.502 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-10 16:06:30.503 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:30.504 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.504 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:30.506 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-10 16:06:30.507 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-10 16:06:30.507 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-10 16:06:30.507 DEBUG 21828 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
