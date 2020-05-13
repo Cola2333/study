@@ -26,7 +26,7 @@ public class HotTagTasks {
     @Autowired
     HotTagCache hotTagCache;
 
-    @Scheduled(fixedRate = 10000)// 每五秒更新一次
+    @Scheduled(fixedRate = 1000 * 60 * 60f)// 每五秒更新一次
 //    @Scheduled(cron = "0 0 1 * * *")// 每天凌晨1点更新
 
     /*

@@ -971,3 +971,314 @@
 2020-05-13 01:20:46.873  INFO 42436 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:20:46 PDT 2020
 2020-05-13 01:20:56.873  INFO 42436 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:20:56 PDT 2020
 2020-05-13 01:20:56.873  INFO 42436 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:20:56 PDT 2020
+2020-05-13 01:38:06.818  INFO 22820 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 22820 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-13 01:38:06.821  INFO 22820 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-13 01:38:08.045  INFO 22820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 01:38:08.054  INFO 22820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 01:38:08.055  INFO 22820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-13 01:38:08.393  INFO 22820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 01:38:08.393  INFO 22820 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1523 ms
+2020-05-13 01:38:09.026  INFO 22820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 01:38:09.105  INFO 22820 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-13 01:38:09.386  INFO 22820 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-13 01:38:09.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:38:09 PDT 2020
+2020-05-13 01:38:09.471  INFO 22820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 01:38:09.475  INFO 22820 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.104 seconds (JVM running for 5.457)
+2020-05-13 01:38:09.486  INFO 22820 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-13 01:38:09.673  INFO 22820 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-13 01:38:09.734  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:38:09 PDT 2020
+2020-05-13 01:38:16.948  INFO 22820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-13 01:38:16.948  INFO 22820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-13 01:38:16.953  INFO 22820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-05-13 01:38:19.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:38:19 PDT 2020
+2020-05-13 01:38:19.440  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:38:19 PDT 2020
+2020-05-13 01:38:29.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:38:29 PDT 2020
+2020-05-13 01:38:29.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:38:29 PDT 2020
+2020-05-13 01:38:39.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:38:39 PDT 2020
+2020-05-13 01:38:39.440  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:38:39 PDT 2020
+2020-05-13 01:38:49.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:38:49 PDT 2020
+2020-05-13 01:38:49.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:38:49 PDT 2020
+2020-05-13 01:38:59.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:38:59 PDT 2020
+2020-05-13 01:38:59.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:38:59 PDT 2020
+2020-05-13 01:39:09.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:39:09 PDT 2020
+2020-05-13 01:39:09.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:39:09 PDT 2020
+2020-05-13 01:39:19.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:39:19 PDT 2020
+2020-05-13 01:39:19.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:39:19 PDT 2020
+2020-05-13 01:39:29.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:39:29 PDT 2020
+2020-05-13 01:39:29.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:39:29 PDT 2020
+2020-05-13 01:39:39.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:39:39 PDT 2020
+2020-05-13 01:39:39.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:39:39 PDT 2020
+2020-05-13 01:39:49.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:39:49 PDT 2020
+2020-05-13 01:39:49.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:39:49 PDT 2020
+2020-05-13 01:39:59.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:39:59 PDT 2020
+2020-05-13 01:39:59.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:39:59 PDT 2020
+2020-05-13 01:40:09.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:40:09 PDT 2020
+2020-05-13 01:40:09.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:40:09 PDT 2020
+2020-05-13 01:40:19.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:40:19 PDT 2020
+2020-05-13 01:40:19.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:40:19 PDT 2020
+2020-05-13 01:40:29.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:40:29 PDT 2020
+2020-05-13 01:40:29.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:40:29 PDT 2020
+2020-05-13 01:40:39.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:40:39 PDT 2020
+2020-05-13 01:40:39.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:40:39 PDT 2020
+2020-05-13 01:40:49.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:40:49 PDT 2020
+2020-05-13 01:40:49.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:40:49 PDT 2020
+2020-05-13 01:40:59.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:40:59 PDT 2020
+2020-05-13 01:40:59.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:40:59 PDT 2020
+2020-05-13 01:41:09.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:41:09 PDT 2020
+2020-05-13 01:41:09.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:41:09 PDT 2020
+2020-05-13 01:41:19.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:41:19 PDT 2020
+2020-05-13 01:41:19.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:41:19 PDT 2020
+2020-05-13 01:41:29.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:41:29 PDT 2020
+2020-05-13 01:41:29.440  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:41:29 PDT 2020
+2020-05-13 01:41:39.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:41:39 PDT 2020
+2020-05-13 01:41:39.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:41:39 PDT 2020
+2020-05-13 01:41:49.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:41:49 PDT 2020
+2020-05-13 01:41:49.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:41:49 PDT 2020
+2020-05-13 01:41:59.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:41:59 PDT 2020
+2020-05-13 01:41:59.439  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:41:59 PDT 2020
+2020-05-13 01:42:09.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:42:09 PDT 2020
+2020-05-13 01:42:09.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:42:09 PDT 2020
+2020-05-13 01:42:19.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:42:19 PDT 2020
+2020-05-13 01:42:19.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:42:19 PDT 2020
+2020-05-13 01:42:29.436  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:42:29 PDT 2020
+2020-05-13 01:42:29.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:42:29 PDT 2020
+2020-05-13 01:42:39.437  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:42:39 PDT 2020
+2020-05-13 01:42:39.438  INFO 22820 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:42:39 PDT 2020
+2020-05-13 01:43:13.008  INFO 24828 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 24828 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-13 01:43:13.012  INFO 24828 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-13 01:43:14.479  INFO 24828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 01:43:14.490  INFO 24828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 01:43:14.497  INFO 24828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-13 01:43:14.603  INFO 24828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 01:43:14.603  INFO 24828 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1523 ms
+2020-05-13 01:43:15.247  INFO 24828 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 01:43:15.312  INFO 24828 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-13 01:43:15.549  INFO 24828 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-13 01:43:15.588  INFO 24828 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:43:15 PDT 2020
+2020-05-13 01:43:15.612  INFO 24828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 01:43:15.615  INFO 24828 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.084 seconds (JVM running for 5.271)
+2020-05-13 01:43:15.625  INFO 24828 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-13 01:43:15.761  INFO 24828 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-13 01:43:15.805  INFO 24828 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:43:15 PDT 2020
+2020-05-13 01:43:25.270  INFO 24828 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-13 01:43:25.270  INFO 24828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-13 01:43:25.279  INFO 24828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-05-13 01:57:48.301  INFO 7628 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 7628 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-13 01:57:48.305  INFO 7628 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-13 01:57:49.706  INFO 7628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 01:57:49.715  INFO 7628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 01:57:49.716  INFO 7628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-13 01:57:49.815  INFO 7628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 01:57:49.815  INFO 7628 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1444 ms
+2020-05-13 01:57:50.406  INFO 7628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 01:57:50.467  INFO 7628 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-13 01:57:50.674  INFO 7628 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-13 01:57:50.710  INFO 7628 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Wed May 13 01:57:50 PDT 2020
+2020-05-13 01:57:50.735  INFO 7628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 01:57:50.738  INFO 7628 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 2.94 seconds (JVM running for 5.699)
+2020-05-13 01:57:50.748  INFO 7628 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-13 01:57:50.874  INFO 7628 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-13 01:57:50.882 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-13 01:57:50.899 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-13 01:57:50.922 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-13 01:57:50.922 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-13 01:57:50.925 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-13 01:57:50.925 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-13 01:57:50.927 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-13 01:57:50.927 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-13 01:57:50.931 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-13 01:57:50.932 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-13 01:57:50.932 DEBUG 7628 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 23
+2020-05-13 01:57:50.934  INFO 7628 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Wed May 13 01:57:50 PDT 2020
+2020-05-13 01:58:01.643  INFO 7628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-13 01:58:01.643  INFO 7628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-13 01:58:01.649  INFO 7628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-05-13 01:58:01.677 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 01:58:01.681 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 01:58:01.682 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:01.689 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 01:58:01.690 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 01:58:01.693 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 01:58:01.711 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION WHERE title regexp ? and tag regexp ? 
+2020-05-13 01:58:01.713 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: (String), (String)
+2020-05-13 01:58:01.714 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 01:58:01.715 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION WHERE title regexp ? and tag regexp ? order by gmt_create desc limit ?, ? 
+2020-05-13 01:58:01.717 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: (String), (String), 0(Integer), 5(Integer)
+2020-05-13 01:58:01.722 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 01:58:01.723 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:01.724 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:01.724 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:01.729 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:01.729 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:01.730 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:01.731 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:01.731 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:01.732 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:01.733 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:01.733 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 01:58:01.733 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:01.734 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:01.734 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:01.734 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:02.751 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 01:58:02.752 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 01:58:02.753 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:02.756 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 01:58:02.757 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 01:58:02.758 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 01:58:02.760 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION WHERE title regexp ? and tag regexp ? 
+2020-05-13 01:58:02.760 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: (String), (String)
+2020-05-13 01:58:02.761 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 01:58:02.761 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION WHERE title regexp ? and tag regexp ? order by gmt_create desc limit ?, ? 
+2020-05-13 01:58:02.762 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.Q.selectBySearch                 : ==> Parameters: (String), (String), 5(Integer), 5(Integer)
+2020-05-13 01:58:02.765 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 01:58:02.766 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:02.766 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 01:58:02.767 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:02.768 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:02.768 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:02.768 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:02.769 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:02.769 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:02.769 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:02.770 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:02.770 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:02.771 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:02.772 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:02.772 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:02.773 DEBUG 7628 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:22.068 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 01:58:22.069 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 01:58:22.069 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:22.071 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 01:58:22.071 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 01:58:22.072 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 01:58:22.074 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION WHERE title regexp ? and tag regexp ? 
+2020-05-13 01:58:22.074 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: (String), (String)
+2020-05-13 01:58:22.075 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 01:58:22.076 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION WHERE title regexp ? and tag regexp ? order by gmt_create desc limit ?, ? 
+2020-05-13 01:58:22.076 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.Q.selectBySearch                 : ==> Parameters: (String), (String), 5(Integer), 5(Integer)
+2020-05-13 01:58:22.077 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 01:58:22.078 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:22.079 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 01:58:22.079 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:22.080 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:22.080 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:22.080 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:22.082 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:22.082 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:22.083 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:22.085 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:22.085 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:22.086 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:58:22.086 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:58:22.086 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:58:22.087 DEBUG 7628 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:49.317 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 01:59:49.317 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 01:59:49.318 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:49.319 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 01:59:49.319 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 01:59:49.320 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 01:59:49.320 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-13 01:59:49.321 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-13 01:59:49.321 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 01:59:49.322 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-13 01:59:49.322 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-13 01:59:49.324 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 01:59:49.325 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:49.325 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:49.326 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:49.330 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:49.331 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:49.332 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:49.332 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:49.332 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:49.333 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:49.334 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:49.334 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 01:59:49.334 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:49.335 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:49.335 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:49.335 DEBUG 7628 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:54.616 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 01:59:54.617 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 01:59:54.618 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:54.620 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 01:59:54.620 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 01:59:54.620 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 01:59:54.622 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION WHERE title regexp ? and tag regexp ? 
+2020-05-13 01:59:54.622 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: (String), (String)
+2020-05-13 01:59:54.623 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 01:59:54.624 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION WHERE title regexp ? and tag regexp ? order by gmt_create desc limit ?, ? 
+2020-05-13 01:59:54.624 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.Q.selectBySearch                 : ==> Parameters: (String), (String), 5(Integer), 5(Integer)
+2020-05-13 01:59:54.626 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 01:59:54.628 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:54.628 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 01:59:54.629 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:54.630 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:54.631 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:54.631 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:54.632 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:54.632 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:54.633 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:54.634 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:54.634 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:54.635 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 01:59:54.635 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 01:59:54.636 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 01:59:54.636 DEBUG 7628 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:00.113 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 02:00:00.113 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 02:00:00.114 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:00.115 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 02:00:00.116 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 02:00:00.116 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 02:00:00.117 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-13 02:00:00.118 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-13 02:00:00.118 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 02:00:00.118 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-13 02:00:00.118 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-13 02:00:00.120 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 02:00:00.120 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:00.121 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:00.121 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:00.121 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:00.122 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:00.122 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:00.122 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:00.123 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:00.123 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:00.123 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:00.123 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 02:00:00.124 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:00.124 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:00.125 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:00.125 DEBUG 7628 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:05.308 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-13 02:00:05.308 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 5ea69790-c5c4-4327-bc3c-5cf42cf282bf(String)
+2020-05-13 02:00:05.309 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:05.310 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-13 02:00:05.310 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-13 02:00:05.310 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-13 02:00:05.312 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION WHERE title regexp ? and tag regexp ? 
+2020-05-13 02:00:05.312 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: (String), (String)
+2020-05-13 02:00:05.313 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-13 02:00:05.313 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION WHERE title regexp ? and tag regexp ? order by gmt_create desc limit ?, ? 
+2020-05-13 02:00:05.314 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: (String), (String), 5(Integer), 5(Integer)
+2020-05-13 02:00:05.315 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-13 02:00:05.318 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:05.318 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-13 02:00:05.318 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:05.319 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:05.319 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:05.320 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:05.320 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:05.320 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:05.321 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:05.321 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:05.321 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:05.321 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-13 02:00:05.321 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-13 02:00:05.322 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-13 02:00:05.322 DEBUG 7628 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
