@@ -39,13 +39,15 @@ public class QuestionService {
     /*
     * 首页分页显示
     * */
-    public PaginationDTO show(Integer pageNum, Integer size, String search) {
+    public PaginationDTO show(Integer pageNum, Integer size, String search, String topHot) {
         if (StringUtils.isNotBlank(search)) {
             String[] tags = StringUtils.split(search, " ");
             search = Arrays.stream(tags).collect(Collectors.joining(" | "));
         }
+
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
-        questionQueryDTO.setSearch(search);
+        questionQueryDTO.setSearch(search); //搜索问题
+        questionQueryDTO.setTopHot(topHot); //搜索标签
         Integer totalCount = (int)questionExtMapper.countBySearch(questionQueryDTO);
         //Integer totalCount = questionMapper.countTotal();
         Integer totalPage;
