@@ -42,7 +42,7 @@ public class QuestionService {
     public PaginationDTO show(Integer pageNum, Integer size, String search, String topHot) {
         if (StringUtils.isNotBlank(search)) {
             String[] tags = StringUtils.split(search, " ");
-            search = Arrays.stream(tags).collect(Collectors.joining(" | "));
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
         }
 
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
@@ -70,7 +70,8 @@ public class QuestionService {
             pageNum = 1;
         }
 
-        Integer offset = (pageNum - 1) * size;// limit子句中的第一个参数
+        //如果totalPage=0的话 pageNum也会等于0 所以可能会出问题
+        Integer offset = pageNum < 1 ? 0 : size * (pageNum - 1);;// limit子句中的第一个参数
 
         questionQueryDTO.setOffset(offset);
         questionQueryDTO.setSize(size);
