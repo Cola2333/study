@@ -27,7 +27,7 @@ public class CustomizeExceptionHandler {
             if (e instanceof CustomizeException) { //是我们已知(已经定义过的)的异常
                 resultDTO = ResultDTO.errorOf((CustomizeException) e); //保证是json格式
             }else { //未定义的异常
-                log.error("handle error", e);
+                //log.error("handle error", e);
                 resultDTO =  ResultDTO.errorOf(CustormizeErrorCode.SYS_ERROR);
             }
             try { //手动写到前端 之所以这样是我们需要返回一个ModelView 然而Json格式的数据不能是ModelView
@@ -45,16 +45,17 @@ public class CustomizeExceptionHandler {
             if (e instanceof CustomizeException) {
                 model.addAttribute("message", e.getMessage());
             }else {
-                model.addAttribute("message", CustormizeErrorCode.SYS_ERROR);
+                log.error("handle error", e);
+                model.addAttribute("message", CustormizeErrorCode.SYS_ERROR.getMessage());
             }
             return new ModelAndView("error");
     }
 
-    private HttpStatus getStatus(HttpServletRequest request) {
-        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-        if (statusCode == null) {
-            return HttpStatus.INTERNAL_SERVER_ERROR;
-        }
-        return HttpStatus.valueOf(statusCode);
-    }
+//    private HttpStatus getStatus(HttpServletRequest request) {
+//        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+//        if (statusCode == null) {
+//            return HttpStatus.INTERNAL_SERVER_ERROR;
+//        }
+//        return HttpStatus.valueOf(statusCode);
+//    }
 }
