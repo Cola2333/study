@@ -58,10 +58,10 @@
   <select id="selectBySearch" parameterType="life.usc.study.dto.QuestionQueryDTO" resultMap="BaseResultMap">
     select * from QUESTION
     <where>
-      <if test="search != null">
+      <if test="search != null and search != ''">
         and title regexp #{search}
       </if>
-      <if test="topHot != null">
+      <if test="topHot != null and topHot != ''">
         and tag regexp #{topHot}
       </if>
     </where>
