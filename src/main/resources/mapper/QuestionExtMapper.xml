@@ -46,10 +46,10 @@
   <select id="countBySearch" parameterType="life.usc.study.dto.QuestionQueryDTO" resultType="java.lang.Integer">
     select count(*) from QUESTION
     <where>
-      <if test="search != null">
+      <if test="search != null and search != ''">
         and title regexp #{search}
       </if>
-      <if test="topHot != null">
+      <if test="topHot != null and topHot != ''">
         and tag regexp #{topHot}
       </if>
     </where>
