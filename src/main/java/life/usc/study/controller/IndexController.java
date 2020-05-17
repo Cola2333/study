@@ -1,7 +1,10 @@
 package life.usc.study.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import life.usc.study.cache.HotTagCache;
 import life.usc.study.dto.PaginationDTO;
+import life.usc.study.model.Question;
 import life.usc.study.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +31,7 @@ public class IndexController {
                         @RequestParam(name = "size", defaultValue = "5") Integer size,
                         @RequestParam(name= "search", required = false) String search,
                         @RequestParam(name= "topHot", required = false) String topHot) {
+
 
         PaginationDTO pagination = questionService.show(pageNum, size, search, topHot);
         LinkedList<String> topHots = hotTagCache.getTopHots();
