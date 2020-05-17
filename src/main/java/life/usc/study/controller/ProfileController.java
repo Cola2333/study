@@ -39,17 +39,13 @@ public class ProfileController {
         if ("question".equals(action)) {
             model.addAttribute("section", action);
             model.addAttribute("sectionName", "我的提问");
-            PageInfo<QuestionDTO> pageInfo = questionService.ListByPageHelper(pageNum, size, user.getAccountId());
-            model.addAttribute("pageInfo", pageInfo);
 
-            //PaginationDTO pagination = questionService.list(pageNum, size, user.getAccountId());
-            //model.addAttribute("questionList", pagination);
+            PaginationDTO pagination = questionService.list(pageNum, size, user.getAccountId());
+            model.addAttribute("questionList", pagination);
         }else if("reply".equals(action)) {
-            PageInfo<NotificationDTO> pageInfo = notificationService.ListByPageHelper(pageNum, size, user.getAccountId());
-            //PaginationDTO pagination = notificationService.list(pageNum, size, user.getAccountId());
+            PaginationDTO pagination = notificationService.list(pageNum, size, user.getAccountId());
 //            Long unreadCount = notificationService.unreadCount(user.getAccountId());
-           // model.addAttribute("questionList", pagination);
-            model.addAttribute("pageInfo", pageInfo);
+            model.addAttribute("questionList", pagination);
 //            model.addAttribute("unreadCount", unreadCount);
             model.addAttribute("section", action);
             model.addAttribute("sectionName", "最新回复");

@@ -111,44 +111,6 @@ public class NotificationService {
         return paginationDTO;
     }
 
-    public PageInfo<NotificationDTO> ListByPageHelper(Integer pageNum, Integer size, String accountId) {
-        NotificationExample notificationExample = new NotificationExample();
-        notificationExample.createCriteria()
-                .andReceiverEqualTo(accountId);
-        notificationExample.setOrderByClause("gmt_create desc");
-
-        List<Notification> notifications = notificationMapper.selectByExample(notificationExample);
-
-        /* 拿到所有notifier */
-        List<String> userId = notifications.stream().map(notification -> notification.getNotifier()).distinct().collect(Collectors.toList());
-        UserExample userExample = new UserExample();
-        userExample.createCriteria()
-                .andAccountIdIn(userId);
-        List<User> users = userMapper.selectByExample(userExample);
-        //生成usermap
-        Map<String, User> userMap = users.stream().collect(Collectors.toMap(user -> user.getAccountId(), user -> user));
-
-        /* 拿到所有question */
-        List<Long> questionId = notifications.stream().map(notification -> notification.getOuterId()).distinct().collect(Collectors.toList()); //如果有if怎么写
-        QuestionExample questionExample = new QuestionExample();
-        questionExample.createCriteria().
-                andIdIn(questionId);
-        List<Question> questions = questionMapper.selectByExample(questionExample);
-        // 生成questionMap
-        Map<Long, Question> questionMap = questions.stream().distinct().collect(Collectors.toMap(question -> question.getId(), question -> question));
-
-        /* 生成notificationDTO */
-        List<NotificationDTO> notificationDTOS = notifications.stream().map(notification -> {
-            NotificationDTO notificationDTO = new NotificationDTO();
-            BeanUtils.copyProperties(notification, notificationDTO);
-            notificationDTO.setType(NotificationTypeEnum.nameOfType(notification.getType())); // 感觉很奇怪
-            notificationDTO.setNotifierName(userMap.get(notification.getNotifier()).getName());
-            notificationDTO.setOuterTitle(questionMap.get(notification.getOuterId()).getTitle());
-            return notificationDTO;
-        }).collect(Collectors.toList());
-        return new PageInfo<NotificationDTO>(notificationDTOS);
-    }
-
     public Long unreadCount(String accountId) {
         NotificationExample notificationExample = new NotificationExample();
         notificationExample.createCriteria().

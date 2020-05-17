@@ -15487,3 +15487,228 @@ Update your application's configuration
 2020-05-16 22:35:16.039 DEBUG 18744 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
 2020-05-16 22:35:16.039 DEBUG 18744 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
 2020-05-16 22:35:16.039 DEBUG 18744 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:09.992  INFO 20384 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 20384 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-16 22:47:09.996  INFO 20384 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-16 22:47:11.062  INFO 20384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-16 22:47:11.327  INFO 20384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-16 22:47:11.335  INFO 20384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-16 22:47:11.336  INFO 20384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-16 22:47:11.433  INFO 20384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-16 22:47:11.434  INFO 20384 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1375 ms
+2020-05-16 22:47:11.577  INFO 20384 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-05-16 22:47:11.713 ERROR 20384 --- [main] com.alibaba.druid.pool.DruidDataSource   : testWhileIdle is true, validationQuery not set
+2020-05-16 22:47:11.863  INFO 20384 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-16 22:47:12.328  INFO 20384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-16 22:47:12.389  INFO 20384 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-16 22:47:12.516  INFO 20384 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-16 22:47:12.577  INFO 20384 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Sat May 16 22:47:12 PDT 2020
+2020-05-16 22:47:12.604  INFO 20384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-16 22:47:12.607  INFO 20384 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.108 seconds (JVM running for 5.295)
+2020-05-16 22:47:12.627 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? 
+2020-05-16 22:47:12.740 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 5(Integer)
+2020-05-16 22:47:12.762 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 5
+2020-05-16 22:47:12.769 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?, ? 
+2020-05-16 22:47:12.770 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 5(Integer), 5(Integer)
+2020-05-16 22:47:12.773 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 5
+2020-05-16 22:47:12.774 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?, ? 
+2020-05-16 22:47:12.775 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 10(Integer), 5(Integer)
+2020-05-16 22:47:12.777 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 5
+2020-05-16 22:47:12.778 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?, ? 
+2020-05-16 22:47:12.778 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 15(Integer), 5(Integer)
+2020-05-16 22:47:12.782 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 5
+2020-05-16 22:47:12.782 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?, ? 
+2020-05-16 22:47:12.783 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 20(Integer), 5(Integer)
+2020-05-16 22:47:12.784 DEBUG 20384 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 3
+2020-05-16 22:47:12.786  INFO 20384 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Sat May 16 22:47:12 PDT 2020
+2020-05-16 22:47:19.258  INFO 20384 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-16 22:47:19.259  INFO 20384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-16 22:47:19.265  INFO 20384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-05-16 22:47:19.302 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:19.328 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:19.329 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:19.346 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:19.349 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:19.354 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:19.383 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-16 22:47:19.384 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-16 22:47:19.385 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-16 22:47:19.386 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-16 22:47:19.390 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-16 22:47:19.398 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-16 22:47:19.400 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:19.402 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:19.402 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:19.410 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:19.410 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:19.411 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:19.412 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:19.413 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:19.414 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:19.416 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:19.416 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-16 22:47:19.417 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:19.418 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:19.418 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:19.419 DEBUG 20384 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:21.365 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:21.366 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:21.367 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:21.370 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:21.371 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:21.373 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:21.380 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-05-16 22:47:21.381 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.m.QuestionMapper.countByExample    : ==> Parameters: 50670561(String)
+2020-05-16 22:47:21.382 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-05-16 22:47:21.384 DEBUG 20384 --- [http-nio-8080-exec-2] .Q.selectByExampleWithBLOBsWithRowbounds : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION WHERE ( CREATOR = ? ) order by gmt_create desc LIMIT ? 
+2020-05-16 22:47:21.385 DEBUG 20384 --- [http-nio-8080-exec-2] .Q.selectByExampleWithBLOBsWithRowbounds : ==> Parameters: 50670561(String), 2(Integer)
+2020-05-16 22:47:21.387 DEBUG 20384 --- [http-nio-8080-exec-2] .Q.selectByExampleWithBLOBsWithRowbounds : <==      Total: 2
+2020-05-16 22:47:21.388 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:21.388 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:21.389 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:21.390 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:21.390 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:21.391 DEBUG 20384 --- [http-nio-8080-exec-2] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:22.593 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:22.593 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:22.594 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:22.597 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:22.598 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:22.598 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:22.603 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-05-16 22:47:22.604 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.m.QuestionMapper.countByExample    : ==> Parameters: 50670561(String)
+2020-05-16 22:47:22.604 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-05-16 22:47:22.606 DEBUG 20384 --- [http-nio-8080-exec-3] .Q.selectByExampleWithBLOBsWithRowbounds : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION WHERE ( CREATOR = ? ) order by gmt_create desc LIMIT ?, ? 
+2020-05-16 22:47:22.608 DEBUG 20384 --- [http-nio-8080-exec-3] .Q.selectByExampleWithBLOBsWithRowbounds : ==> Parameters: 50670561(String), 6(Integer), 2(Integer)
+2020-05-16 22:47:22.610 DEBUG 20384 --- [http-nio-8080-exec-3] .Q.selectByExampleWithBLOBsWithRowbounds : <==      Total: 2
+2020-05-16 22:47:22.611 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:22.611 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:22.612 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:22.613 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:22.613 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:22.614 DEBUG 20384 --- [http-nio-8080-exec-3] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:22.998 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:22.998 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:22.999 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.001 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:23.001 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:23.002 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:23.004 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-05-16 22:47:23.004 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.m.QuestionMapper.countByExample    : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.005 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-05-16 22:47:23.007 DEBUG 20384 --- [http-nio-8080-exec-4] .Q.selectByExampleWithBLOBsWithRowbounds : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION WHERE ( CREATOR = ? ) order by gmt_create desc LIMIT ?, ? 
+2020-05-16 22:47:23.007 DEBUG 20384 --- [http-nio-8080-exec-4] .Q.selectByExampleWithBLOBsWithRowbounds : ==> Parameters: 50670561(String), 2(Integer), 2(Integer)
+2020-05-16 22:47:23.009 DEBUG 20384 --- [http-nio-8080-exec-4] .Q.selectByExampleWithBLOBsWithRowbounds : <==      Total: 2
+2020-05-16 22:47:23.011 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:23.012 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.013 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.014 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:23.015 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.015 DEBUG 20384 --- [http-nio-8080-exec-4] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.534 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:23.534 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:23.536 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.538 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:23.538 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:23.538 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:23.539 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-05-16 22:47:23.540 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.m.QuestionMapper.countByExample    : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.540 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-05-16 22:47:23.541 DEBUG 20384 --- [http-nio-8080-exec-5] .Q.selectByExampleWithBLOBsWithRowbounds : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION WHERE ( CREATOR = ? ) order by gmt_create desc LIMIT ?, ? 
+2020-05-16 22:47:23.542 DEBUG 20384 --- [http-nio-8080-exec-5] .Q.selectByExampleWithBLOBsWithRowbounds : ==> Parameters: 50670561(String), 4(Integer), 2(Integer)
+2020-05-16 22:47:23.544 DEBUG 20384 --- [http-nio-8080-exec-5] .Q.selectByExampleWithBLOBsWithRowbounds : <==      Total: 2
+2020-05-16 22:47:23.545 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:23.545 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.546 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.547 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:23.547 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.547 DEBUG 20384 --- [http-nio-8080-exec-5] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.817 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:23.817 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:23.818 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.819 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:23.819 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:23.820 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:23.822 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-05-16 22:47:23.822 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.m.QuestionMapper.countByExample    : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.822 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-05-16 22:47:23.824 DEBUG 20384 --- [http-nio-8080-exec-6] .Q.selectByExampleWithBLOBsWithRowbounds : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION WHERE ( CREATOR = ? ) order by gmt_create desc LIMIT ?, ? 
+2020-05-16 22:47:23.824 DEBUG 20384 --- [http-nio-8080-exec-6] .Q.selectByExampleWithBLOBsWithRowbounds : ==> Parameters: 50670561(String), 6(Integer), 2(Integer)
+2020-05-16 22:47:23.827 DEBUG 20384 --- [http-nio-8080-exec-6] .Q.selectByExampleWithBLOBsWithRowbounds : <==      Total: 2
+2020-05-16 22:47:23.828 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:23.828 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.829 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:23.831 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 22:47:23.831 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:23.832 DEBUG 20384 --- [http-nio-8080-exec-6] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:24.521 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:24.522 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:24.522 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:24.523 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:24.524 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:24.524 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:24.526 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? ) 
+2020-05-16 22:47:24.527 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String)
+2020-05-16 22:47:24.528 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:24.529 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.selectByExampleWithRowbounds   : ==>  Preparing: select ID, RECEIVER, OUTER_ID, TYPE, GMT_CREATE, STATUS, NOTIFIER from NOTIFICATION WHERE ( RECEIVER = ? ) order by gmt_create desc LIMIT ? 
+2020-05-16 22:47:24.530 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.selectByExampleWithRowbounds   : ==> Parameters: 50670561(String), 2(Integer)
+2020-05-16 22:47:24.531 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.N.selectByExampleWithRowbounds   : <==      Total: 2
+2020-05-16 22:47:24.534 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID in ( ? ) ) 
+2020-05-16 22:47:24.537 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-16 22:47:24.538 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:24.541 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.QuestionMapper.selectByExample   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION WHERE ( ID in ( ? ) ) 
+2020-05-16 22:47:24.543 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.QuestionMapper.selectByExample   : ==> Parameters: 290(Long)
+2020-05-16 22:47:24.544 DEBUG 20384 --- [http-nio-8080-exec-7] l.u.s.m.QuestionMapper.selectByExample   : <==      Total: 1
+2020-05-16 22:47:25.438 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:25.438 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:25.439 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:25.440 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:25.440 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:25.441 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:25.442 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? ) 
+2020-05-16 22:47:25.443 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String)
+2020-05-16 22:47:25.443 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:25.444 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.selectByExampleWithRowbounds   : ==>  Preparing: select ID, RECEIVER, OUTER_ID, TYPE, GMT_CREATE, STATUS, NOTIFIER from NOTIFICATION WHERE ( RECEIVER = ? ) order by gmt_create desc LIMIT ?, ? 
+2020-05-16 22:47:25.445 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.selectByExampleWithRowbounds   : ==> Parameters: 50670561(String), 6(Integer), 2(Integer)
+2020-05-16 22:47:25.446 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.N.selectByExampleWithRowbounds   : <==      Total: 2
+2020-05-16 22:47:25.448 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID in ( ? ) ) 
+2020-05-16 22:47:25.448 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 22:47:25.448 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:25.450 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.QuestionMapper.selectByExample   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION WHERE ( ID in ( ? , ? ) ) 
+2020-05-16 22:47:25.451 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.QuestionMapper.selectByExample   : ==> Parameters: 161(Long), 66(Long)
+2020-05-16 22:47:25.452 DEBUG 20384 --- [http-nio-8080-exec-8] l.u.s.m.QuestionMapper.selectByExample   : <==      Total: 2
+2020-05-16 22:47:25.826 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:25.826 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:25.826 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:25.828 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:25.828 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:25.828 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:25.830 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? ) 
+2020-05-16 22:47:25.830 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String)
+2020-05-16 22:47:25.830 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:25.831 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.selectByExampleWithRowbounds   : ==>  Preparing: select ID, RECEIVER, OUTER_ID, TYPE, GMT_CREATE, STATUS, NOTIFIER from NOTIFICATION WHERE ( RECEIVER = ? ) order by gmt_create desc LIMIT ?, ? 
+2020-05-16 22:47:25.831 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.selectByExampleWithRowbounds   : ==> Parameters: 50670561(String), 2(Integer), 2(Integer)
+2020-05-16 22:47:25.832 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.N.selectByExampleWithRowbounds   : <==      Total: 2
+2020-05-16 22:47:25.833 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID in ( ? ) ) 
+2020-05-16 22:47:25.833 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-16 22:47:25.834 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:25.835 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.QuestionMapper.selectByExample   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION WHERE ( ID in ( ? , ? ) ) 
+2020-05-16 22:47:25.836 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.QuestionMapper.selectByExample   : ==> Parameters: 290(Long), 193(Long)
+2020-05-16 22:47:25.836 DEBUG 20384 --- [http-nio-8080-exec-9] l.u.s.m.QuestionMapper.selectByExample   : <==      Total: 2
+2020-05-16 22:47:26.153 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 22:47:26.154 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: b633e3d8-6742-4eff-bc6f-9da2ea828fbd(String)
+2020-05-16 22:47:26.154 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:26.155 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? and STATUS = ? ) 
+2020-05-16 22:47:26.155 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String), 0(Integer)
+2020-05-16 22:47:26.156 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:26.157 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : ==>  Preparing: select count(*) from NOTIFICATION WHERE ( RECEIVER = ? ) 
+2020-05-16 22:47:26.157 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : ==> Parameters: 50670561(String)
+2020-05-16 22:47:26.158 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.countByExample                 : <==      Total: 1
+2020-05-16 22:47:26.158 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.selectByExampleWithRowbounds   : ==>  Preparing: select ID, RECEIVER, OUTER_ID, TYPE, GMT_CREATE, STATUS, NOTIFIER from NOTIFICATION WHERE ( RECEIVER = ? ) order by gmt_create desc LIMIT ? 
+2020-05-16 22:47:26.158 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.selectByExampleWithRowbounds   : ==> Parameters: 50670561(String), 2(Integer)
+2020-05-16 22:47:26.159 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.N.selectByExampleWithRowbounds   : <==      Total: 2
+2020-05-16 22:47:26.160 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID in ( ? ) ) 
+2020-05-16 22:47:26.160 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-16 22:47:26.161 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 22:47:26.162 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.QuestionMapper.selectByExample   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION WHERE ( ID in ( ? ) ) 
+2020-05-16 22:47:26.162 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.QuestionMapper.selectByExample   : ==> Parameters: 290(Long)
+2020-05-16 22:47:26.163 DEBUG 20384 --- [http-nio-8080-exec-10] l.u.s.m.QuestionMapper.selectByExample   : <==      Total: 1
