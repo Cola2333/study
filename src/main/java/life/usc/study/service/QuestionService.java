@@ -1,5 +1,7 @@
 package life.usc.study.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import life.usc.study.dto.PaginationDTO;
 import life.usc.study.dto.QuestionDTO;
 import life.usc.study.dto.QuestionQueryDTO;
@@ -99,7 +101,7 @@ public class QuestionService {
     }
 
     /*
-    * 我发布的问题分页显示
+    * 我发布的问题分页显示 已用pageHelp替换
     * */
     public PaginationDTO list(Integer pageNum, Integer size, String accountId) {
         QuestionExample questionExample = new QuestionExample();
@@ -154,6 +156,31 @@ public class QuestionService {
         PaginationDTO<QuestionDTO> paginationDTO = new PaginationDTO();
         paginationDTO.setPagination(questionDTOS, pageNum, totalPage);
         return paginationDTO;
+    }
+
+    /*
+     * 我发布的问题分页显示 使用pageHelp重构
+     * */
+    public PageInfo<QuestionDTO> ListByPageHelper(Integer pageNum, Integer size, String accountId) {
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.createCriteria()
+                .andCreatorEqualTo(accountId);
+        questionExample.setOrderByClause("gmt_create desc");
+        PageHelper.startPage(pageNum, size);
+        List<Question> questions = questionMapper.selectByExample(questionExample);
+        List<QuestionDTO> questionDTOS = new ArrayList<>();// 用于如果不要pagination的话 可以用这个显示所有question
+        for (Question question : questions) {
+            UserExample userExample = new UserExample();
+            userExample.createCriteria()
+                    .andAccountIdEqualTo(question.getCreator());
+            List<User> users = userMapper.selectByExample(userExample);
+            User user = users.get(0);
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(question, questionDTO);
+            questionDTO.setUser(user);
+            questionDTOS.add(questionDTO);
+        }
+        return new PageInfo<QuestionDTO>(questionDTOS);
     }
 
     public QuestionDTO getById(Long id) {
@@ -226,4 +253,9 @@ public class QuestionService {
         return questionDTOS;
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 405c62d13583a620c395f4b2355d4fdffa56cfdf
 }
