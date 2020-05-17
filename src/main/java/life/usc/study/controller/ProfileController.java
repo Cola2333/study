@@ -1,6 +1,11 @@
 package life.usc.study.controller;
 
+import com.github.pagehelper.PageInfo;
+import life.usc.study.dto.NotificationDTO;
 import life.usc.study.dto.PaginationDTO;
+import life.usc.study.dto.QuestionDTO;
+import life.usc.study.model.Notification;
+import life.usc.study.model.Question;
 import life.usc.study.model.User;
 import life.usc.study.service.NotificationService;
 import life.usc.study.service.QuestionService;
@@ -34,12 +39,17 @@ public class ProfileController {
         if ("question".equals(action)) {
             model.addAttribute("section", action);
             model.addAttribute("sectionName", "我的提问");
-            PaginationDTO pagination = questionService.list(pageNum, size, user.getAccountId());
-            model.addAttribute("questionList", pagination);
+            PageInfo<QuestionDTO> pageInfo = questionService.ListByPageHelper(pageNum, size, user.getAccountId());
+            model.addAttribute("pageInfo", pageInfo);
+
+            //PaginationDTO pagination = questionService.list(pageNum, size, user.getAccountId());
+            //model.addAttribute("questionList", pagination);
         }else if("reply".equals(action)) {
-            PaginationDTO pagination = notificationService.list(pageNum, size, user.getAccountId());
+            PageInfo<NotificationDTO> pageInfo = notificationService.ListByPageHelper(pageNum, size, user.getAccountId());
+            //PaginationDTO pagination = notificationService.list(pageNum, size, user.getAccountId());
 //            Long unreadCount = notificationService.unreadCount(user.getAccountId());
-            model.addAttribute("questionList", pagination);
+           // model.addAttribute("questionList", pagination);
+            model.addAttribute("pageInfo", pageInfo);
 //            model.addAttribute("unreadCount", unreadCount);
             model.addAttribute("section", action);
             model.addAttribute("sectionName", "最新回复");
