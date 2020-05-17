@@ -15120,3 +15120,59 @@ Caused by: java.lang.IllegalStateException: Property 'configuration' and 'config
 2020-05-16 12:53:40.139 DEBUG 25044 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
 2020-05-16 12:53:40.139 DEBUG 25044 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
 2020-05-16 12:53:40.139 DEBUG 25044 --- [http-nio-8080-exec-7] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 17:37:04.818  INFO 24964 --- [main] life.usc.study.StudyApplication          : Starting StudyApplication on DESKTOP-SO9EI3Q with PID 24964 (C:\WJJ\java\IDEAIU-workspace\study\target\classes started by WANG in C:\WJJ\java\IDEAIU-workspace\study)
+2020-05-16 17:37:04.823  INFO 24964 --- [main] life.usc.study.StudyApplication          : No active profile set, falling back to default profiles: default
+2020-05-16 17:37:06.204  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-16 17:37:06.466  INFO 24964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-16 17:37:06.477  INFO 24964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-16 17:37:06.477  INFO 24964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-16 17:37:06.570  INFO 24964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-16 17:37:06.571  INFO 24964 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1686 ms
+2020-05-16 17:37:06.710  INFO 24964 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-05-16 17:37:06.844 ERROR 24964 --- [main] com.alibaba.druid.pool.DruidDataSource   : testWhileIdle is true, validationQuery not set
+2020-05-16 17:37:06.987  INFO 24964 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-16 17:37:07.452  INFO 24964 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-16 17:37:07.519  INFO 24964 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-16 17:37:07.660  INFO 24964 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-16 17:37:07.710  INFO 24964 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule start Sat May 16 17:37:07 PDT 2020
+2020-05-16 17:37:07.738  INFO 24964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-16 17:37:07.742  INFO 24964 --- [main] life.usc.study.StudyApplication          : Started StudyApplication in 3.389 seconds (JVM running for 5.438)
+2020-05-16 17:37:07.757 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-16 17:37:07.877 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-16 17:37:07.907 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-16 17:37:07.909 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-16 17:37:07.913 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-16 17:37:07.913 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-16 17:37:07.915 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-16 17:37:07.915 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-16 17:37:07.919 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION 
+2020-05-16 17:37:07.920 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-05-16 17:37:07.921 DEBUG 24964 --- [scheduling-1] l.u.s.m.Q.selectByExampleWithRowbounds   : <==      Total: 23
+2020-05-16 17:37:07.922  INFO 24964 --- [scheduling-1] life.usc.study.schedule.HotTagTasks      : hotTagSchedule stop Sat May 16 17:37:07 PDT 2020
+2020-05-16 17:37:25.003  INFO 24964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-16 17:37:25.004  INFO 24964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-16 17:37:25.012  INFO 24964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-05-16 17:37:25.047 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-05-16 17:37:25.074 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 96b23d34-a9b5-4912-a299-50ae0909b101(String)
+2020-05-16 17:37:25.075 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 0
+2020-05-16 17:37:25.103 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2020-05-16 17:37:25.105 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-05-16 17:37:25.106 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-05-16 17:37:25.107 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?, ? 
+2020-05-16 17:37:25.111 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-05-16 17:37:25.117 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.m.Q.selectBySearch                 : <==      Total: 5
+2020-05-16 17:37:25.118 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 17:37:25.119 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 17:37:25.120 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 17:37:25.126 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 17:37:25.126 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 17:37:25.127 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 17:37:25.128 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 17:37:25.128 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 17:37:25.129 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 17:37:25.130 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 17:37:25.130 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 65057715(String)
+2020-05-16 17:37:25.131 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-05-16 17:37:25.132 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-05-16 17:37:25.132 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : ==> Parameters: 50670561(String)
+2020-05-16 17:37:25.132 DEBUG 24964 --- [http-nio-8080-exec-1] l.u.s.mapper.UserMapper.selectByExample  : <==      Total: 1

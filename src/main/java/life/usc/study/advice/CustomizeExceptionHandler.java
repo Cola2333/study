@@ -45,12 +45,14 @@ public class CustomizeExceptionHandler {
             if (e instanceof CustomizeException) {
                 model.addAttribute("message", e.getMessage());
             }else {
-                log.error("handle error", e);
-                model.addAttribute("message", CustormizeErrorCode.SYS_ERROR.getMessage());
+                log.error("handle error", e); //如果忘记写此句能会导致控制台无错误信息
+                model.addAttribute("message", CustormizeErrorCode.SYS_ERROR.getMessage()); //如果忘记加getMessage可能会导致控制台无错误信息
             }
             return new ModelAndView("error");
     }
-
+/**
+ * 如果加了可能会导致控制台无错误信息
+ * */
 //    private HttpStatus getStatus(HttpServletRequest request) {
 //        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
 //        if (statusCode == null) {
