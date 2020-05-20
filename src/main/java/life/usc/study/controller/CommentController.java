@@ -27,7 +27,7 @@ public class CommentController {
     * */
     @ResponseBody
     @PostMapping("/comment")
-    public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
+    public Object post(@RequestBody CommentCreateDTO commentCreateDTO, // 接受一个json数据转成对象
                        HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
