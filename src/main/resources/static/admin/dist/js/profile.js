@@ -95,7 +95,7 @@ function validPasswordForUpdate(originalPassword, newPassword) {
     }
     if (!validPassword(newPassword)) {
         $('#updatePassword-info').css("display", "block");
-        $('#updatePassword-info').html("请输入符合规范的密码！");
+        $('#updatePassword-info').html("请输入符合规范的密码！最少六位！");
         return false;
     }
     return true;

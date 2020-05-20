@@ -102,6 +102,7 @@ function validCN_ENString2_100(str) {
  * @returns {boolean}
  */
 function validPassword(password) {
+    //判断字符串是否包含数字、字母、符号3项组合的正则表达式 ，字符串长度为 6~20位
     var pattern = /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$)^.{6,20}$/;
     if (pattern.test(password.trim())) {
         return (true);
