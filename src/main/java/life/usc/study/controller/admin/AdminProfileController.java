@@ -31,7 +31,7 @@ public class AdminProfileController {
 
     @ResponseBody
     @PostMapping("/profile/name")
-    String updateName(@RequestParam("loginUserName") String loginUserName,
+    public String updateName(@RequestParam("loginUserName") String loginUserName,
                       @RequestParam("nickName") String nickName,
                       HttpServletRequest request) {
 
@@ -48,7 +48,7 @@ public class AdminProfileController {
 
     @ResponseBody
     @PostMapping("/profile/password")
-    String updatePassword(@RequestParam("originalPassword") String originalPassword,
+    public String updatePassword(@RequestParam("originalPassword") String originalPassword,
                           @RequestParam("newPassword") String newPassword,
                           HttpServletRequest request) {
         if (StringUtils.isBlank(originalPassword) || StringUtils.isBlank(newPassword)) {
@@ -65,5 +65,13 @@ public class AdminProfileController {
         else {
             return  "修改失败";
         }
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        request.getSession().removeAttribute("loginUserId");
+        request.getSession().removeAttribute("loginUser");
+        request.getSession().removeAttribute("nickName");
+        return "admin/login";
     }
 }

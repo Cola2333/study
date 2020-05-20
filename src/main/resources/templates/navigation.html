@@ -29,6 +29,9 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li th:if="${session.user}==null">
+                        <a th:href="@{/admin/login}">管理员登录</a>
+                    </li>
+                    <li th:if="${session.user}==null">
                         <!--<a href="https://github.com/login/oauth/authorize?client_id=367c20aae8ce7d906d23&redirect_uri=http://localhost:8080/callback&scope=user&state=1">登录</a>-->
                         <a th:href="@{https://github.com/login/oauth/authorize(client_id='367c20aae8ce7d906d23',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}">登录</a>
                     </li>
